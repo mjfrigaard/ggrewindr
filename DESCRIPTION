@@ -1,0 +1,26 @@
+Package: ggrewindr
+Title: Late 90s Themes for ggplot2
+Version: 0.1.0
+Authors@R: person("Martin", "Frigaard", email = "mjfrigaard@pm.me", role = c("aut", "cre"))
+Description: A collection of 'ggplot2' themes inspired by late 1990s toys,
+    snacks, TV shows, and technology. Each palette is sampled from a freely
+    licensed image of its reference and checked for contrast and color blind
+    separation.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+Depends: 
+    R (>= 4.1)
+Imports: 
+    ggplot2 (>= 4.0.0),
+    sysfonts
+Suggests: 
+    knitr,
+    showtext,
+    quarto,
+    testthat (>= 3.0.0)
+VignetteBuilder: quarto
+Config/testthat/edition: 3
+URL: https://mjfrigaard.github.io/ggrewindr/, https://github.com/mjfrigaard/ggrewindr
+BugReports: https://github.com/mjfrigaard/ggrewindr/issues
+Config/roxygen2/version: 8.1.1
