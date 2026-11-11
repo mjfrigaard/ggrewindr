@@ -2,12 +2,12 @@
 #'
 #' A `ggplot2` theme built from the CU-SeeMe phone book window: a dithered gray
 #' background, a black frame, a white panel, black, magenta, and gray marks,
-#' and a magenta Tahoma title.
+#' and a magenta Noto Sans title.
 #'
 #' @param base_size Base font size. Defaults to `15`.
-#' @param base_family Base font family. Defaults to Arial when it's
-#'     available on the system, otherwise `"sans"`.
-#' @param title_family Title font family. Defaults to Tahoma when
+#' @param base_family Base font family. Defaults to Arimo, which
+#'     ships with `ggrewindr`.
+#' @param title_family Title font family. Defaults to Noto Sans when
 #'     it's available, otherwise `"sans"`.
 #'
 #' @return A `ggplot2` theme object.
@@ -21,9 +21,8 @@
 #'   labs(title = "CU-SeeMe") +
 #'   theme_cuseeme(base_family = "sans", title_family = "sans")
 theme_cuseeme <- function(base_size = 15,
-                      base_family = register_font("Arial", "Arial.ttf",
-                                                  "Arial Bold.ttf"),
-                      title_family = register_font("Tahoma", "Tahoma Bold.ttf")) {
+                      base_family = register_font("Arimo"),
+                      title_family = register_font("Noto Sans", weight = 700)) {
   cols <- cuseeme_cols
   ggplot2::theme_bw(base_size = base_size, base_family = base_family) +
     ggplot2::theme(

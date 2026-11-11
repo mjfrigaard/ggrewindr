@@ -2,12 +2,12 @@
 #'
 #' A `ggplot2` theme built from the :CueCat barcode scanner: a pale paper
 #' background, a putty frame, red, ink, LED orange, and putty marks, and a
-#' red Marker Felt title.
+#' red Permanent Marker title.
 #'
 #' @param base_size Base font size. Defaults to `15`.
-#' @param base_family Base font family. Defaults to Arial when it's
-#'     available on the system, otherwise `"sans"`.
-#' @param title_family Title font family. Defaults to Marker Felt when
+#' @param base_family Base font family. Defaults to Arimo, which
+#'     ships with `ggrewindr`.
+#' @param title_family Title font family. Defaults to Permanent Marker when
 #'     it's available, otherwise `"sans"`.
 #'
 #' @return A `ggplot2` theme object.
@@ -21,10 +21,8 @@
 #'   labs(title = "CueCat") +
 #'   theme_cuecat(base_family = "sans", title_family = "sans")
 theme_cuecat <- function(base_size = 15,
-                      base_family = register_font("Arial", "Arial.ttf",
-                                                  "Arial Bold.ttf"),
-                      title_family = register_font("Marker Felt", "MarkerFelt.ttc",
-                                                  dir = "/System/Library/Fonts")) {
+                      base_family = register_font("Arimo"),
+                      title_family = register_font("Permanent Marker")) {
   cols <- cuecat_cols
   ggplot2::theme_bw(base_size = base_size, base_family = base_family) +
     ggplot2::theme(

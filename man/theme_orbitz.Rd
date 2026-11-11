@@ -6,19 +6,18 @@
 \usage{
 theme_orbitz(
   base_size = 15,
-  base_family = register_font("Arial", "Arial.ttf", "Arial Bold.ttf"),
-  title_family = register_font("Marker Felt", "MarkerFelt.ttc", dir =
-    "/System/Library/Fonts"),
+  base_family = register_font("Arimo"),
+  title_family = register_font("Permanent Marker"),
   mode = c("dark", "light")
 )
 }
 \arguments{
 \item{base_size}{Base font size. Defaults to \code{15}.}
 
-\item{base_family}{Base font family. Defaults to Arial when it's
-available on the system, otherwise \code{"sans"}.}
+\item{base_family}{Base font family. Defaults to Arimo, which
+ships with \code{ggrewindr}.}
 
-\item{title_family}{Title font family. Defaults to Marker Felt when
+\item{title_family}{Title font family. Defaults to Permanent Marker when
 it's available, otherwise \code{"sans"}.}
 
 \item{mode}{\code{"dark"} (the default) or \code{"light"}.}
@@ -29,7 +28,7 @@ A \code{ggplot2} theme object.
 \description{
 A \code{ggplot2} theme built from Orbitz, the 1997 drink with floating balls:
 a black background, a gold frame, gold and magenta ball marks, sand,
-maroon, and amber accents, and a Marker Felt title.
+maroon, and amber accents, and a Permanent Marker title.
 }
 \details{
 Use \code{mode = "light"} for a light background with darker text and marks.

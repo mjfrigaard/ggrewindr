@@ -6,19 +6,19 @@
 \usage{
 theme_jurassic(
   base_size = 15,
-  base_family = register_font("Arial", "Arial.ttf", "Arial Bold.ttf"),
-  title_family = register_font("Herculanum", "Herculanum.ttf"),
+  base_family = register_font("Arimo"),
+  title_family = register_font("Macondo"),
   mode = c("dark", "light")
 )
 }
 \arguments{
 \item{base_size}{Base font size. Defaults to \code{15}.}
 
-\item{base_family}{Base font family. Defaults to Arial when it's
-available on the system, otherwise \code{"sans"}.}
+\item{base_family}{Base font family. Defaults to Arimo, which
+ships with \code{ggrewindr}.}
 
-\item{title_family}{Title font family. Defaults to Herculanum when
-it's available on the system, otherwise \code{"sans"}.}
+\item{title_family}{Title font family. Defaults to Macondo, which
+ships with \code{ggrewindr}.}
 
 \item{mode}{\code{"dark"} (the default) or \code{"light"}.}
 }
@@ -29,7 +29,7 @@ A \code{ggplot2} theme object.
 A late 90s \code{ggplot2} theme modeled on the Jurassic Park (1993) Post Office
 souvenir stamp sheet: a black sheet with a logo red frame, a dark jungle
 plot area, stamp yellow titles, red, yellow, sunset orange, cream, and tan
-marks, and a Herculanum title.
+marks, and a Macondo title.
 }
 \details{
 Use \code{mode = "light"} for a light background with darker text and marks.

@@ -6,16 +6,16 @@
 \usage{
 theme_y2k(
   base_size = 15,
-  base_family = register_font("Arial", "Arial.ttf", "Arial Bold.ttf"),
-  title_family = register_font("PT Mono", "PTMono.ttc"),
+  base_family = register_font("Arimo"),
+  title_family = register_font("PT Mono"),
   mode = c("dark", "light")
 )
 }
 \arguments{
 \item{base_size}{Base font size. Defaults to \code{15}.}
 
-\item{base_family}{Base font family. Defaults to Arial when it's
-available on the system, otherwise \code{"sans"}.}
+\item{base_family}{Base font family. Defaults to Arimo, which
+ships with \code{ggrewindr}.}
 
 \item{title_family}{Title font family. Defaults to PT Mono when
 it's available, otherwise \code{"sans"}.}

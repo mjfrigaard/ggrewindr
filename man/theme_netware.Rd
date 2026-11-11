@@ -6,17 +6,17 @@
 \usage{
 theme_netware(
   base_size = 15,
-  base_family = register_font("Arial", "Arial.ttf", "Arial Bold.ttf"),
-  title_family = register_font("Gill Sans", "GillSans.ttc")
+  base_family = register_font("Arimo"),
+  title_family = register_font("Cabin")
 )
 }
 \arguments{
 \item{base_size}{Base font size. Defaults to \code{15}.}
 
-\item{base_family}{Base font family. Defaults to Arial when it's
-available on the system, otherwise \code{"sans"}.}
+\item{base_family}{Base font family. Defaults to Arimo, which
+ships with \code{ggrewindr}.}
 
-\item{title_family}{Title font family. Defaults to Gill Sans when
+\item{title_family}{Title font family. Defaults to Cabin when
 it's available, otherwise \code{"sans"}.}
 }
 \value{
@@ -25,7 +25,7 @@ A \code{ggplot2} theme object.
 \description{
 A \code{ggplot2} theme built from Novell NetWare 2.0 boxes: a pale blush
 background with dark ink text, a NetWare red frame and title, maroon, red,
-rose, and blush marks, and a Gill Sans title.
+rose, and blush marks, and a Cabin title.
 }
 \examples{
 library(ggplot2)

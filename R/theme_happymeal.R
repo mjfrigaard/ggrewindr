@@ -1,13 +1,13 @@
 #' Happy Meal theme
 #'
 #' A late 90s `ggplot2` theme modeled on a McDonald's Happy Meal box: red
-#' box, golden yellow marks, a cream plot area, and an Arial Rounded title.
+#' box, golden yellow marks, a cream plot area, and an Varela Round title.
 #'
 #' @param base_size Base font size. Defaults to `15`.
-#' @param base_family Base font family. Defaults to Arial when it's
-#'     available on the system, otherwise `"sans"`.
-#' @param title_family Title font family. Defaults to Arial Rounded when
-#'     it's available on the system, otherwise `"sans"`.
+#' @param base_family Base font family. Defaults to Arimo, which
+#'     ships with `ggrewindr`.
+#' @param title_family Title font family. Defaults to Varela Round, which
+#'     ships with `ggrewindr`.
 #'
 #' @return A `ggplot2` theme object.
 #'
@@ -20,9 +20,8 @@
 #'   labs(title = "Happy Meal") +
 #'   theme_happymeal(base_family = "sans", title_family = "sans")
 theme_happymeal <- function(base_size = 15,
-                      base_family = register_font("Arial", "Arial.ttf",
-                                                  "Arial Bold.ttf"),
-                      title_family = register_font("Arial Rounded", "Arial Rounded Bold.ttf")) {
+                      base_family = register_font("Arimo"),
+                      title_family = register_font("Varela Round")) {
   cols <- happymeal_cols
   ggplot2::theme_bw(base_size = base_size, base_family = base_family) +
     ggplot2::theme(

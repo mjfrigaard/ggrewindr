@@ -2,12 +2,12 @@
 #'
 #' A `ggplot2` theme built from IBM and Hitachi Microdrive cards: a tan desk
 #' background, a black frame, IBM blue, red, navy, and Hitachi sky blue marks,
-#' and a red Times New Roman title.
+#' and a red Tinos title.
 #'
 #' @param base_size Base font size. Defaults to `15`.
-#' @param base_family Base font family. Defaults to Arial when it's
-#'     available on the system, otherwise `"sans"`.
-#' @param title_family Title font family. Defaults to Times New Roman when
+#' @param base_family Base font family. Defaults to Arimo, which
+#'     ships with `ggrewindr`.
+#' @param title_family Title font family. Defaults to Tinos when
 #'     it's available, otherwise `"sans"`.
 #'
 #' @return A `ggplot2` theme object.
@@ -21,9 +21,8 @@
 #'   labs(title = "IBM Microdrive") +
 #'   theme_microdrive(base_family = "sans", title_family = "sans")
 theme_microdrive <- function(base_size = 15,
-                      base_family = register_font("Arial", "Arial.ttf",
-                                                  "Arial Bold.ttf"),
-                      title_family = register_font("Times New Roman", "Times New Roman Bold.ttf")) {
+                      base_family = register_font("Arimo"),
+                      title_family = register_font("Tinos", weight = 700)) {
   cols <- microdrive_cols
   ggplot2::theme_bw(base_size = base_size, base_family = base_family) +
     ggplot2::theme(

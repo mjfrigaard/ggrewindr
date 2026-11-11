@@ -2,14 +2,14 @@
 #'
 #' A `ggplot2` theme built from the Bop It toy: a deep purple background,
 #' a yellow frame and title, yellow, blue, green, orange, and pink marks,
-#' a purple to yellow continuous scale, and a Rockwell title.
+#' a purple to yellow continuous scale, and a Arvo title.
 #'
 #' Use `mode = "light"` for a light background with darker text and marks.
 #'
 #' @param base_size Base font size. Defaults to `15`.
-#' @param base_family Base font family. Defaults to Arial when it's
-#'     available on the system, otherwise `"sans"`.
-#' @param title_family Title font family. Defaults to Rockwell when
+#' @param base_family Base font family. Defaults to Arimo, which
+#'     ships with `ggrewindr`.
+#' @param title_family Title font family. Defaults to Arvo when
 #'     it's available, otherwise `"sans"`.
 #' @param mode `"dark"` (the default) or `"light"`.
 #'
@@ -24,9 +24,8 @@
 #'   labs(title = "Bop It") +
 #'   theme_bopit(base_family = "sans", title_family = "sans")
 theme_bopit <- function(base_size = 15,
-                      base_family = register_font("Arial", "Arial.ttf",
-                                                  "Arial Bold.ttf"),
-                      title_family = register_font("Rockwell", "Rockwell.ttc"),
+                      base_family = register_font("Arimo"),
+                      title_family = register_font("Arvo"),
                       mode = c("dark", "light")) {
   mode <- match.arg(mode)
   cols <- bopit_cols[[mode]]

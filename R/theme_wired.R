@@ -2,7 +2,7 @@
 #'
 #' A `ggplot2` theme built from the WIRED (US) November/December 2024 "Big
 #' Interview" cover: a black background, a white frame and title, a
-#' Helvetica Neue title, and the cover's red, blue, pink, gray, and steel
+#' Arimo title, and the cover's red, blue, pink, gray, and steel
 #' blue marks.
 #'
 #' Use `mode = "light"` for a light gray background with a black frame,
@@ -10,9 +10,9 @@
 #' marks.
 #'
 #' @param base_size Base font size. Defaults to `15`.
-#' @param base_family Base font family. Defaults to Arial when it's
-#'     available on the system, otherwise `"sans"`.
-#' @param title_family Title font family. Defaults to Helvetica Neue when
+#' @param base_family Base font family. Defaults to Arimo, which
+#'     ships with `ggrewindr`.
+#' @param title_family Title font family. Defaults to Arimo when
 #'     it's available, otherwise `"sans"`.
 #' @param mode `"dark"` (the default) or `"light"`.
 #'
@@ -27,9 +27,8 @@
 #'   labs(title = "WIRED") +
 #'   theme_wired(base_family = "sans", title_family = "sans")
 theme_wired <- function(base_size = 15,
-                      base_family = register_font("Arial", "Arial.ttf",
-                                                  "Arial Bold.ttf"),
-                      title_family = register_font("Helvetica Neue", "HelveticaNeue.ttc"),
+                      base_family = register_font("Arimo"),
+                      title_family = register_font("Arimo"),
                       mode = c("dark", "light")) {
   mode <- match.arg(mode)
   cols <- wired_cols[[mode]]

@@ -6,17 +6,17 @@
 \usage{
 theme_tamagotchi(
   base_size = 15,
-  base_family = register_font("Arial", "Arial.ttf", "Arial Bold.ttf"),
-  title_family = register_font("Futura", "Futura.ttc")
+  base_family = register_font("Arimo"),
+  title_family = register_font("Jost")
 )
 }
 \arguments{
 \item{base_size}{Base font size. Defaults to \code{15}.}
 
-\item{base_family}{Base font family. Defaults to Arial when it's
-available on the system, otherwise \code{"sans"}.}
+\item{base_family}{Base font family. Defaults to Arimo, which
+ships with \code{ggrewindr}.}
 
-\item{title_family}{Title font family. Defaults to Futura when
+\item{title_family}{Title font family. Defaults to Jost when
 it's available, otherwise \code{"sans"}.}
 }
 \value{
@@ -25,7 +25,7 @@ A \code{ggplot2} theme object.
 \description{
 A late 90s \code{ggplot2} theme modeled on a Tamagotchi: a lilac egg shell,
 a gray green LCD screen plot area, pink, teal, and yellow shell colors,
-and a Futura title.
+and a Jost title.
 }
 \examples{
 library(ggplot2)

@@ -6,17 +6,17 @@
 \usage{
 theme_gushers(
   base_size = 15,
-  base_family = register_font("Arial", "Arial.ttf", "Arial Bold.ttf"),
-  title_family = register_font("Chalkboard", "Chalkboard.ttc")
+  base_family = register_font("Arimo"),
+  title_family = register_font("Patrick Hand")
 )
 }
 \arguments{
 \item{base_size}{Base font size. Defaults to \code{15}.}
 
-\item{base_family}{Base font family. Defaults to Arial when it's
-available on the system, otherwise \code{"sans"}.}
+\item{base_family}{Base font family. Defaults to Arimo, which
+ships with \code{ggrewindr}.}
 
-\item{title_family}{Title font family. Defaults to Chalkboard when
+\item{title_family}{Title font family. Defaults to Patrick Hand when
 it's available, otherwise \code{"sans"}.}
 }
 \value{
@@ -25,7 +25,7 @@ A \code{ggplot2} theme object.
 \description{
 A \code{ggplot2} theme built from Fruit Gushers: a white plate background, a red
 frame and title, red, green, teal, orange, and pink fruit snack marks, and
-a Chalkboard title.
+a Patrick Hand title.
 }
 \examples{
 library(ggplot2)

@@ -2,12 +2,12 @@
 #'
 #' A `ggplot2` theme built from a Java AWT applet: a gray window background, a
 #' gray frame, a white panel, red, blue, purple, and gray marks, and a blue
-#' Verdana title.
+#' Noto Sans title.
 #'
 #' @param base_size Base font size. Defaults to `15`.
-#' @param base_family Base font family. Defaults to Arial when it's
-#'     available on the system, otherwise `"sans"`.
-#' @param title_family Title font family. Defaults to Verdana when
+#' @param base_family Base font family. Defaults to Arimo, which
+#'     ships with `ggrewindr`.
+#' @param title_family Title font family. Defaults to Noto Sans when
 #'     it's available, otherwise `"sans"`.
 #'
 #' @return A `ggplot2` theme object.
@@ -21,9 +21,8 @@
 #'   labs(title = "Java applet") +
 #'   theme_javaapplet(base_family = "sans", title_family = "sans")
 theme_javaapplet <- function(base_size = 15,
-                      base_family = register_font("Arial", "Arial.ttf",
-                                                  "Arial Bold.ttf"),
-                      title_family = register_font("Verdana", "Verdana Bold.ttf")) {
+                      base_family = register_font("Arimo"),
+                      title_family = register_font("Noto Sans", weight = 700)) {
   cols <- javaapplet_cols
   ggplot2::theme_bw(base_size = base_size, base_family = base_family) +
     ggplot2::theme(

@@ -1,18 +1,18 @@
-# Register a system font with sysfonts and return its family name, or
-# "sans" when the font files can't be found. Used by the 90s themes.
-register_font <- function(family, regular, bold = NULL,
-                          dir = "/System/Library/Fonts/Supplemental") {
-  regular <- file.path(dir, regular)
-  if (!is.null(bold)) {
-    bold <- file.path(dir, bold)
-  }
-  if (!file.exists(regular) || (!is.null(bold) && !file.exists(bold))) {
+# Register a font that ships in inst/assets and return its family name, or
+# "sans" when the font file is missing. Used by the 90s themes. Each font
+# lives in inst/assets/<Family>/<Family>-<weight>.ttf (spaces dropped), with
+# its license file. A 400 weight font also gets its 700 file as bold.
+register_font <- function(family, weight = 400) {
+  name <- gsub(" ", "", family)
+  regular <- file.path(font_path(), name, paste0(name, "-", weight, ".ttf"))
+  if (!file.exists(regular)) {
     return("sans")
   }
-  if (is.null(bold)) {
-    sysfonts::font_add(family = family, regular = regular)
-  } else {
+  bold <- file.path(font_path(), name, paste0(name, "-700.ttf"))
+  if (weight == 400 && file.exists(bold)) {
     sysfonts::font_add(family = family, regular = regular, bold = bold)
+  } else {
+    sysfonts::font_add(family = family, regular = regular)
   }
   family
 }

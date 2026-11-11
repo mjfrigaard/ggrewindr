@@ -6,17 +6,17 @@
 \usage{
 theme_j2me(
   base_size = 15,
-  base_family = register_font("Arial", "Arial.ttf", "Arial Bold.ttf"),
-  title_family = register_font("Arial Narrow", "Arial Narrow Bold.ttf")
+  base_family = register_font("Arimo"),
+  title_family = register_font("Archivo Narrow", weight = 700)
 )
 }
 \arguments{
 \item{base_size}{Base font size. Defaults to \code{15}.}
 
-\item{base_family}{Base font family. Defaults to Arial when it's
-available on the system, otherwise \code{"sans"}.}
+\item{base_family}{Base font family. Defaults to Arimo, which
+ships with \code{ggrewindr}.}
 
-\item{title_family}{Title font family. Defaults to Arial Narrow when
+\item{title_family}{Title font family. Defaults to Archivo Narrow when
 it's available, otherwise \code{"sans"}.}
 }
 \value{
@@ -25,7 +25,7 @@ A \code{ggplot2} theme object.
 \description{
 A \code{ggplot2} theme built from a Nokia N73 running a J2ME app: a black phone
 background, a silver frame, a pale screen panel, Ushahidi red, tan, brown,
-and black marks, and an Arial Narrow title.
+and black marks, and an Archivo Narrow title.
 }
 \examples{
 library(ggplot2)

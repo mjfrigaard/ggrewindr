@@ -7,8 +7,8 @@
 #' Use `mode = "light"` for a light background with darker text and marks.
 #'
 #' @param base_size Base font size. Defaults to `15`.
-#' @param base_family Base font family. Defaults to Arial when it's
-#'     available on the system, otherwise `"sans"`.
+#' @param base_family Base font family. Defaults to Arimo, which
+#'     ships with `ggrewindr`.
 #' @param title_family Title font family. Defaults to PT Mono when
 #'     it's available, otherwise `"sans"`.
 #' @param mode `"dark"` (the default) or `"light"`.
@@ -24,9 +24,8 @@
 #'   labs(title = "Y2K") +
 #'   theme_y2k(base_family = "sans", title_family = "sans")
 theme_y2k <- function(base_size = 15,
-                      base_family = register_font("Arial", "Arial.ttf",
-                                                  "Arial Bold.ttf"),
-                      title_family = register_font("PT Mono", "PTMono.ttc"),
+                      base_family = register_font("Arimo"),
+                      title_family = register_font("PT Mono"),
                       mode = c("dark", "light")) {
   mode <- match.arg(mode)
   cols <- y2k_cols[[mode]]

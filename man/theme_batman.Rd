@@ -6,8 +6,8 @@
 \usage{
 theme_batman(
   base_size = 15,
-  base_family = register_font("Arial", "Arial.ttf", "Arial Bold.ttf"),
-  title_family = register_font("DIN Condensed", "DIN Condensed Bold.ttf"),
+  base_family = register_font("Arimo"),
+  title_family = register_font("Barlow Condensed", weight = 700),
   version = c("movie", "classic", "darknight"),
   mode = c("dark", "light")
 )
@@ -15,10 +15,10 @@ theme_batman(
 \arguments{
 \item{base_size}{Base font size. Defaults to \code{15}.}
 
-\item{base_family}{Base font family. Defaults to Arial when it's
-available on the system, otherwise \code{"sans"}.}
+\item{base_family}{Base font family. Defaults to Arimo, which
+ships with \code{ggrewindr}.}
 
-\item{title_family}{Title font family. Defaults to DIN Condensed when
+\item{title_family}{Title font family. Defaults to Barlow Condensed when
 it's available, otherwise \code{"sans"}.}
 
 \item{version}{One of \code{"movie"}, \code{"classic"}, or \code{"darknight"}.}
@@ -42,7 +42,7 @@ a blue title, a cream plot area, and blue, yellow, black, and gray marks.
 frame and title, a navy plot area, and yellow, olive, and slate marks.
 }
 
-All three use a DIN Condensed title. Use \code{mode = "light"} for a light
+All three use a Barlow Condensed title. Use \code{mode = "light"} for a light
 version of \code{"movie"} or \code{"darknight"}; \code{"classic"} is already light, so
 \code{mode} doesn't change it.
 }

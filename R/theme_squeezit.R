@@ -2,12 +2,12 @@
 #'
 #' A `ggplot2` theme built from Squeezit drink bottles on gravel: a gravel
 #' background, a red frame and title, red, orange, green, pink, blue, and gold
-#' bottle marks, and a Skia title.
+#' bottle marks, and a Marcellus title.
 #'
 #' @param base_size Base font size. Defaults to `15`.
-#' @param base_family Base font family. Defaults to Arial when it's
-#'     available on the system, otherwise `"sans"`.
-#' @param title_family Title font family. Defaults to Skia when
+#' @param base_family Base font family. Defaults to Arimo, which
+#'     ships with `ggrewindr`.
+#' @param title_family Title font family. Defaults to Marcellus when
 #'     it's available, otherwise `"sans"`.
 #'
 #' @return A `ggplot2` theme object.
@@ -21,9 +21,8 @@
 #'   labs(title = "Squeezit") +
 #'   theme_squeezit(base_family = "sans", title_family = "sans")
 theme_squeezit <- function(base_size = 15,
-                      base_family = register_font("Arial", "Arial.ttf",
-                                                  "Arial Bold.ttf"),
-                      title_family = register_font("Skia", "Skia.ttf")) {
+                      base_family = register_font("Arimo"),
+                      title_family = register_font("Marcellus")) {
   cols <- squeezit_cols
   ggplot2::theme_bw(base_size = base_size, base_family = base_family) +
     ggplot2::theme(

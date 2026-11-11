@@ -3,15 +3,15 @@
 #' A late 90s `ggplot2` theme modeled on the Jurassic Park (1993) Post Office
 #' souvenir stamp sheet: a black sheet with a logo red frame, a dark jungle
 #' plot area, stamp yellow titles, red, yellow, sunset orange, cream, and tan
-#' marks, and a Herculanum title.
+#' marks, and a Macondo title.
 #'
 #' Use `mode = "light"` for a light background with darker text and marks.
 #'
 #' @param base_size Base font size. Defaults to `15`.
-#' @param base_family Base font family. Defaults to Arial when it's
-#'     available on the system, otherwise `"sans"`.
-#' @param title_family Title font family. Defaults to Herculanum when
-#'     it's available on the system, otherwise `"sans"`.
+#' @param base_family Base font family. Defaults to Arimo, which
+#'     ships with `ggrewindr`.
+#' @param title_family Title font family. Defaults to Macondo, which
+#'     ships with `ggrewindr`.
 #' @param mode `"dark"` (the default) or `"light"`.
 #'
 #' @return A `ggplot2` theme object.
@@ -25,9 +25,8 @@
 #'   labs(title = "Jurassic Park") +
 #'   theme_jurassic(base_family = "sans", title_family = "sans")
 theme_jurassic <- function(base_size = 15,
-                      base_family = register_font("Arial", "Arial.ttf",
-                                                  "Arial Bold.ttf"),
-                      title_family = register_font("Herculanum", "Herculanum.ttf"),
+                      base_family = register_font("Arimo"),
+                      title_family = register_font("Macondo"),
                       mode = c("dark", "light")) {
   mode <- match.arg(mode)
   cols <- jurassic_cols[[mode]]

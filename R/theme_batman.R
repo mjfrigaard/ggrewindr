@@ -10,14 +10,14 @@
 #' * `"darknight"`: The Dark Knight, with a charcoal background, a yellow
 #'   frame and title, a navy plot area, and yellow, olive, and slate marks.
 #'
-#' All three use a DIN Condensed title. Use `mode = "light"` for a light
+#' All three use a Barlow Condensed title. Use `mode = "light"` for a light
 #' version of `"movie"` or `"darknight"`; `"classic"` is already light, so
 #' `mode` doesn't change it.
 #'
 #' @param base_size Base font size. Defaults to `15`.
-#' @param base_family Base font family. Defaults to Arial when it's
-#'     available on the system, otherwise `"sans"`.
-#' @param title_family Title font family. Defaults to DIN Condensed when
+#' @param base_family Base font family. Defaults to Arimo, which
+#'     ships with `ggrewindr`.
+#' @param title_family Title font family. Defaults to Barlow Condensed when
 #'     it's available, otherwise `"sans"`.
 #' @param version One of `"movie"`, `"classic"`, or `"darknight"`.
 #' @param mode `"dark"` (the default) or `"light"`.
@@ -39,9 +39,8 @@
 #' p + theme_batman(base_family = "sans", title_family = "sans",
 #'                  mode = "light")
 theme_batman <- function(base_size = 15,
-                      base_family = register_font("Arial", "Arial.ttf",
-                                                  "Arial Bold.ttf"),
-                      title_family = register_font("DIN Condensed", "DIN Condensed Bold.ttf"),
+                      base_family = register_font("Arimo"),
+                      title_family = register_font("Barlow Condensed", weight = 700),
                       version = c("movie", "classic", "darknight"),
                       mode = c("dark", "light")) {
   version <- match.arg(version)

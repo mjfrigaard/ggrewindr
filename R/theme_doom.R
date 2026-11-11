@@ -2,14 +2,14 @@
 #'
 #' A `ggplot2` theme built from Doom (1993): a scorched brown background,
 #' a hellfire red frame and title, red, orange, gunmetal, armor green,
-#' blue key, and yellow key marks, and an Impact title.
+#' blue key, and yellow key marks, and an Anton title.
 #'
 #' Use `mode = "light"` for a light background with darker text and marks.
 #'
 #' @param base_size Base font size. Defaults to `15`.
-#' @param base_family Base font family. Defaults to Arial when it's
-#'     available on the system, otherwise `"sans"`.
-#' @param title_family Title font family. Defaults to Impact when
+#' @param base_family Base font family. Defaults to Arimo, which
+#'     ships with `ggrewindr`.
+#' @param title_family Title font family. Defaults to Anton when
 #'     it's available, otherwise `"sans"`.
 #' @param mode `"dark"` (the default) or `"light"`.
 #'
@@ -24,9 +24,8 @@
 #'   labs(title = "Doom") +
 #'   theme_doom(base_family = "sans", title_family = "sans")
 theme_doom <- function(base_size = 15,
-                      base_family = register_font("Arial", "Arial.ttf",
-                                                  "Arial Bold.ttf"),
-                      title_family = register_font("Impact", "Impact.ttf"),
+                      base_family = register_font("Arimo"),
+                      title_family = register_font("Anton"),
                       mode = c("dark", "light")) {
   mode <- match.arg(mode)
   cols <- doom_cols[[mode]]

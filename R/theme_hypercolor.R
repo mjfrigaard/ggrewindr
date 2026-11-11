@@ -2,14 +2,14 @@
 #'
 #' A `ggplot2` theme built from Generra Hypercolor shirts: a deep purple
 #' background, a magenta frame, heat changing magenta, orange, purple,
-#' blue, green, and yellow marks, and a Gill Sans title.
+#' blue, green, and yellow marks, and a Cabin title.
 #'
 #' Use `mode = "light"` for a light background with darker text and marks.
 #'
 #' @param base_size Base font size. Defaults to `15`.
-#' @param base_family Base font family. Defaults to Arial when it's
-#'     available on the system, otherwise `"sans"`.
-#' @param title_family Title font family. Defaults to Gill Sans when
+#' @param base_family Base font family. Defaults to Arimo, which
+#'     ships with `ggrewindr`.
+#' @param title_family Title font family. Defaults to Cabin when
 #'     it's available, otherwise `"sans"`.
 #' @param mode `"dark"` (the default) or `"light"`.
 #'
@@ -24,9 +24,8 @@
 #'   labs(title = "Hypercolor") +
 #'   theme_hypercolor(base_family = "sans", title_family = "sans")
 theme_hypercolor <- function(base_size = 15,
-                      base_family = register_font("Arial", "Arial.ttf",
-                                                  "Arial Bold.ttf"),
-                      title_family = register_font("Gill Sans", "GillSans.ttc"),
+                      base_family = register_font("Arimo"),
+                      title_family = register_font("Cabin"),
                       mode = c("dark", "light")) {
   mode <- match.arg(mode)
   cols <- hypercolor_cols[[mode]]

@@ -2,13 +2,13 @@
 #'
 #' A late 90s `ggplot2` theme modeled on Pogs: a cardboard milk cap
 #' background, a navy frame and title, red, sky blue, yellow, teal, purple,
-#' and rust prints, and a Bradley Hand title.
+#' and rust prints, and a Caveat title.
 #'
 #' @param base_size Base font size. Defaults to `15`.
-#' @param base_family Base font family. Defaults to Arial when it's
-#'     available on the system, otherwise `"sans"`.
-#' @param title_family Title font family. Defaults to Bradley Hand when
-#'     it's available on the system, otherwise `"sans"`.
+#' @param base_family Base font family. Defaults to Arimo, which
+#'     ships with `ggrewindr`.
+#' @param title_family Title font family. Defaults to Caveat, which
+#'     ships with `ggrewindr`.
 #'
 #' @return A `ggplot2` theme object.
 #'
@@ -21,9 +21,8 @@
 #'   labs(title = "Pogs") +
 #'   theme_pogs(base_family = "sans", title_family = "sans")
 theme_pogs <- function(base_size = 15,
-                      base_family = register_font("Arial", "Arial.ttf",
-                                                  "Arial Bold.ttf"),
-                      title_family = register_font("Bradley Hand", "Bradley Hand Bold.ttf")) {
+                      base_family = register_font("Arimo"),
+                      title_family = register_font("Caveat", weight = 700)) {
   cols <- pogs_cols
   ggplot2::theme_bw(base_size = base_size, base_family = base_family) +
     ggplot2::theme(

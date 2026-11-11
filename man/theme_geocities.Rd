@@ -6,18 +6,18 @@
 \usage{
 theme_geocities(
   base_size = 15,
-  base_family = register_font("Arial", "Arial.ttf", "Arial Bold.ttf"),
-  title_family = register_font("Comic Sans MS", "Comic Sans MS Bold.ttf"),
+  base_family = register_font("Arimo"),
+  title_family = register_font("Comic Neue", weight = 700),
   mode = c("dark", "light")
 )
 }
 \arguments{
 \item{base_size}{Base font size. Defaults to \code{15}.}
 
-\item{base_family}{Base font family. Defaults to Arial when it's
-available on the system, otherwise \code{"sans"}.}
+\item{base_family}{Base font family. Defaults to Arimo, which
+ships with \code{ggrewindr}.}
 
-\item{title_family}{Title font family. Defaults to Comic Sans MS when
+\item{title_family}{Title font family. Defaults to Comic Neue when
 it's available, otherwise \code{"sans"}.}
 
 \item{mode}{\code{"dark"} (the default) or \code{"light"}.}

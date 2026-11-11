@@ -2,12 +2,12 @@
 #'
 #' A `ggplot2` theme built from a RIM 950 two-way pager: a concrete background,
 #' a charcoal frame and title, a pale LCD panel, charcoal, orange, and slate
-#' marks, and an Arial Black title.
+#' marks, and an Archivo Black title.
 #'
 #' @param base_size Base font size. Defaults to `15`.
-#' @param base_family Base font family. Defaults to Arial when it's
-#'     available on the system, otherwise `"sans"`.
-#' @param title_family Title font family. Defaults to Arial Black when
+#' @param base_family Base font family. Defaults to Arimo, which
+#'     ships with `ggrewindr`.
+#' @param title_family Title font family. Defaults to Archivo Black when
 #'     it's available, otherwise `"sans"`.
 #'
 #' @return A `ggplot2` theme object.
@@ -21,9 +21,8 @@
 #'   labs(title = "Two-way pager") +
 #'   theme_pager(base_family = "sans", title_family = "sans")
 theme_pager <- function(base_size = 15,
-                      base_family = register_font("Arial", "Arial.ttf",
-                                                  "Arial Bold.ttf"),
-                      title_family = register_font("Arial Black", "Arial Black.ttf")) {
+                      base_family = register_font("Arimo"),
+                      title_family = register_font("Archivo Black")) {
   cols <- pager_cols
   ggplot2::theme_bw(base_size = base_size, base_family = base_family) +
     ggplot2::theme(

@@ -6,18 +6,18 @@
 \usage{
 theme_doom(
   base_size = 15,
-  base_family = register_font("Arial", "Arial.ttf", "Arial Bold.ttf"),
-  title_family = register_font("Impact", "Impact.ttf"),
+  base_family = register_font("Arimo"),
+  title_family = register_font("Anton"),
   mode = c("dark", "light")
 )
 }
 \arguments{
 \item{base_size}{Base font size. Defaults to \code{15}.}
 
-\item{base_family}{Base font family. Defaults to Arial when it's
-available on the system, otherwise \code{"sans"}.}
+\item{base_family}{Base font family. Defaults to Arimo, which
+ships with \code{ggrewindr}.}
 
-\item{title_family}{Title font family. Defaults to Impact when
+\item{title_family}{Title font family. Defaults to Anton when
 it's available, otherwise \code{"sans"}.}
 
 \item{mode}{\code{"dark"} (the default) or \code{"light"}.}
@@ -28,7 +28,7 @@ A \code{ggplot2} theme object.
 \description{
 A \code{ggplot2} theme built from Doom (1993): a scorched brown background,
 a hellfire red frame and title, red, orange, gunmetal, armor green,
-blue key, and yellow key marks, and an Impact title.
+blue key, and yellow key marks, and an Anton title.
 }
 \details{
 Use \code{mode = "light"} for a light background with darker text and marks.

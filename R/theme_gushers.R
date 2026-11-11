@@ -2,12 +2,12 @@
 #'
 #' A `ggplot2` theme built from Fruit Gushers: a white plate background, a red
 #' frame and title, red, green, teal, orange, and pink fruit snack marks, and
-#' a Chalkboard title.
+#' a Patrick Hand title.
 #'
 #' @param base_size Base font size. Defaults to `15`.
-#' @param base_family Base font family. Defaults to Arial when it's
-#'     available on the system, otherwise `"sans"`.
-#' @param title_family Title font family. Defaults to Chalkboard when
+#' @param base_family Base font family. Defaults to Arimo, which
+#'     ships with `ggrewindr`.
+#' @param title_family Title font family. Defaults to Patrick Hand when
 #'     it's available, otherwise `"sans"`.
 #'
 #' @return A `ggplot2` theme object.
@@ -21,9 +21,8 @@
 #'   labs(title = "Gushers") +
 #'   theme_gushers(base_family = "sans", title_family = "sans")
 theme_gushers <- function(base_size = 15,
-                      base_family = register_font("Arial", "Arial.ttf",
-                                                  "Arial Bold.ttf"),
-                      title_family = register_font("Chalkboard", "Chalkboard.ttc")) {
+                      base_family = register_font("Arimo"),
+                      title_family = register_font("Patrick Hand")) {
   cols <- gushers_cols
   ggplot2::theme_bw(base_size = base_size, base_family = base_family) +
     ggplot2::theme(

@@ -6,17 +6,17 @@
 \usage{
 theme_talkboy(
   base_size = 15,
-  base_family = register_font("Arial", "Arial.ttf", "Arial Bold.ttf"),
-  title_family = register_font("Brush Script", "Brush Script.ttf")
+  base_family = register_font("Arimo"),
+  title_family = register_font("Kaushan Script")
 )
 }
 \arguments{
 \item{base_size}{Base font size. Defaults to \code{15}.}
 
-\item{base_family}{Base font family. Defaults to Arial when it's
-available on the system, otherwise \code{"sans"}.}
+\item{base_family}{Base font family. Defaults to Arimo, which
+ships with \code{ggrewindr}.}
 
-\item{title_family}{Title font family. Defaults to Brush Script when
+\item{title_family}{Title font family. Defaults to Kaushan Script when
 it's available, otherwise \code{"sans"}.}
 }
 \value{
@@ -25,7 +25,7 @@ A \code{ggplot2} theme object.
 \description{
 A \code{ggplot2} theme built from the Deluxe Talkboy cassette recorder: a
 dark walnut background, a silver frame and panel, button blue marks, and
-a Brush Script title.
+a Kaushan Script title.
 }
 \examples{
 library(ggplot2)

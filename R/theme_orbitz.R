@@ -2,14 +2,14 @@
 #'
 #' A `ggplot2` theme built from Orbitz, the 1997 drink with floating balls:
 #' a black background, a gold frame, gold and magenta ball marks, sand,
-#' maroon, and amber accents, and a Marker Felt title.
+#' maroon, and amber accents, and a Permanent Marker title.
 #'
 #' Use `mode = "light"` for a light background with darker text and marks.
 #'
 #' @param base_size Base font size. Defaults to `15`.
-#' @param base_family Base font family. Defaults to Arial when it's
-#'     available on the system, otherwise `"sans"`.
-#' @param title_family Title font family. Defaults to Marker Felt when
+#' @param base_family Base font family. Defaults to Arimo, which
+#'     ships with `ggrewindr`.
+#' @param title_family Title font family. Defaults to Permanent Marker when
 #'     it's available, otherwise `"sans"`.
 #' @param mode `"dark"` (the default) or `"light"`.
 #'
@@ -24,10 +24,8 @@
 #'   labs(title = "Orbitz") +
 #'   theme_orbitz(base_family = "sans", title_family = "sans")
 theme_orbitz <- function(base_size = 15,
-                      base_family = register_font("Arial", "Arial.ttf",
-                                                  "Arial Bold.ttf"),
-                      title_family = register_font("Marker Felt", "MarkerFelt.ttc",
-                                                  dir = "/System/Library/Fonts"),
+                      base_family = register_font("Arimo"),
+                      title_family = register_font("Permanent Marker"),
                       mode = c("dark", "light")) {
   mode <- match.arg(mode)
   cols <- orbitz_cols[[mode]]

@@ -1,13 +1,13 @@
 #' Power Rangers theme
 #'
 #' A `ggplot2` theme built from the Mighty Morphin Power Rangers: a light
-#' gray background, a lightning gold frame, a red Copperplate title, and
+#' gray background, a lightning gold frame, a red Cormorant SC title, and
 #' red, blue, yellow, pink, black, and green Ranger marks.
 #'
 #' @param base_size Base font size. Defaults to `15`.
-#' @param base_family Base font family. Defaults to Arial when it's
-#'     available on the system, otherwise `"sans"`.
-#' @param title_family Title font family. Defaults to Copperplate when
+#' @param base_family Base font family. Defaults to Arimo, which
+#'     ships with `ggrewindr`.
+#' @param title_family Title font family. Defaults to Cormorant SC when
 #'     it's available, otherwise `"sans"`.
 #'
 #' @return A `ggplot2` theme object.
@@ -21,9 +21,8 @@
 #'   labs(title = "Power Rangers") +
 #'   theme_powerrangers(base_family = "sans", title_family = "sans")
 theme_powerrangers <- function(base_size = 15,
-                      base_family = register_font("Arial", "Arial.ttf",
-                                                  "Arial Bold.ttf"),
-                      title_family = register_font("Copperplate", "Copperplate.ttc")) {
+                      base_family = register_font("Arimo"),
+                      title_family = register_font("Cormorant SC", weight = 600)) {
   cols <- powerrangers_cols
   ggplot2::theme_bw(base_size = base_size, base_family = base_family) +
     ggplot2::theme(

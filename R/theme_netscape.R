@@ -2,15 +2,15 @@
 #'
 #' A late 90s `ggplot2` theme modeled on the Netscape Navigator logo: a night
 #' sky background, a teal frame, teal, aurora green, sea glass, and deep teal
-#' marks, and a glowing teal Times New Roman title.
+#' marks, and a glowing teal Tinos title.
 #'
 #' Use `mode = "light"` for a light background with darker text and marks.
 #'
 #' @param base_size Base font size. Defaults to `15`.
-#' @param base_family Base font family. Defaults to Arial when it's
-#'     available on the system, otherwise `"sans"`.
-#' @param title_family Title font family. Defaults to Times New Roman Bold when
-#'     it's available on the system, otherwise `"sans"`.
+#' @param base_family Base font family. Defaults to Arimo, which
+#'     ships with `ggrewindr`.
+#' @param title_family Title font family. Defaults to Tinos (bold), which
+#'     ships with `ggrewindr`.
 #' @param mode `"dark"` (the default) or `"light"`.
 #'
 #' @return A `ggplot2` theme object.
@@ -24,9 +24,8 @@
 #'   labs(title = "Netscape") +
 #'   theme_netscape(base_family = "sans", title_family = "sans")
 theme_netscape <- function(base_size = 15,
-                      base_family = register_font("Arial", "Arial.ttf",
-                                                  "Arial Bold.ttf"),
-                      title_family = register_font("Times New Roman", "Times New Roman Bold.ttf"),
+                      base_family = register_font("Arimo"),
+                      title_family = register_font("Tinos", weight = 700),
                       mode = c("dark", "light")) {
   mode <- match.arg(mode)
   cols <- netscape_cols[[mode]]

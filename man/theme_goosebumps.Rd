@@ -6,18 +6,18 @@
 \usage{
 theme_goosebumps(
   base_size = 15,
-  base_family = register_font("Arial", "Arial.ttf", "Arial Bold.ttf"),
-  title_family = register_font("Trattatello", "Trattatello.ttf"),
+  base_family = register_font("Arimo"),
+  title_family = register_font("Uncial Antiqua"),
   mode = c("dark", "light")
 )
 }
 \arguments{
 \item{base_size}{Base font size. Defaults to \code{15}.}
 
-\item{base_family}{Base font family. Defaults to Arial when it's
-available on the system, otherwise \code{"sans"}.}
+\item{base_family}{Base font family. Defaults to Arimo, which
+ships with \code{ggrewindr}.}
 
-\item{title_family}{Title font family. Defaults to Trattatello when
+\item{title_family}{Title font family. Defaults to Uncial Antiqua when
 it's available, otherwise \code{"sans"}.}
 
 \item{mode}{\code{"dark"} (the default) or \code{"light"}.}
@@ -28,7 +28,7 @@ A \code{ggplot2} theme object.
 \description{
 A late 90s \code{ggplot2} theme modeled on the Goosebumps books: a black
 background, a slime green frame and title, a dark purple plot area, slime
-green, purple, pale green, orchid, and moss marks, and a Trattatello title.
+green, purple, pale green, orchid, and moss marks, and a Uncial Antiqua title.
 }
 \details{
 Use \code{mode = "light"} for a light background with darker text and marks.

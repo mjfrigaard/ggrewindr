@@ -2,14 +2,14 @@
 #'
 #' A late 90s `ggplot2` theme modeled on the Goosebumps books: a black
 #' background, a slime green frame and title, a dark purple plot area, slime
-#' green, purple, pale green, orchid, and moss marks, and a Trattatello title.
+#' green, purple, pale green, orchid, and moss marks, and a Uncial Antiqua title.
 #'
 #' Use `mode = "light"` for a light background with darker text and marks.
 #'
 #' @param base_size Base font size. Defaults to `15`.
-#' @param base_family Base font family. Defaults to Arial when it's
-#'     available on the system, otherwise `"sans"`.
-#' @param title_family Title font family. Defaults to Trattatello when
+#' @param base_family Base font family. Defaults to Arimo, which
+#'     ships with `ggrewindr`.
+#' @param title_family Title font family. Defaults to Uncial Antiqua when
 #'     it's available, otherwise `"sans"`.
 #' @param mode `"dark"` (the default) or `"light"`.
 #'
@@ -24,9 +24,8 @@
 #'   labs(title = "Goosebumps") +
 #'   theme_goosebumps(base_family = "sans", title_family = "sans")
 theme_goosebumps <- function(base_size = 15,
-                      base_family = register_font("Arial", "Arial.ttf",
-                                                  "Arial Bold.ttf"),
-                      title_family = register_font("Trattatello", "Trattatello.ttf"),
+                      base_family = register_font("Arimo"),
+                      title_family = register_font("Uncial Antiqua"),
                       mode = c("dark", "light")) {
   mode <- match.arg(mode)
   cols <- goosebumps_cols[[mode]]

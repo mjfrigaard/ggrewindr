@@ -9,8 +9,8 @@
 #' title, and darker cyan, yellow, green, and orange marks.
 #'
 #' @param base_size Base font size. Defaults to `15`.
-#' @param base_family Base font family. Defaults to Arial when it's
-#'     available on the system, otherwise `"sans"`.
+#' @param base_family Base font family. Defaults to Arimo, which
+#'     ships with `ggrewindr`.
 #' @param title_family Title font family. Defaults to Press Start 2P when
 #'     it's available, otherwise `"sans"`.
 #' @param mode `"dark"` (the default) or `"light"`.
@@ -26,8 +26,7 @@
 #'   labs(title = "Tetris") +
 #'   theme_tetris(base_family = "sans", title_family = "sans")
 theme_tetris <- function(base_size = 15,
-                      base_family = register_font("Arial", "Arial.ttf",
-                                                  "Arial Bold.ttf"),
+                      base_family = register_font("Arimo"),
                       title_family = gameboy_font(),
                       mode = c("dark", "light")) {
   mode <- match.arg(mode)

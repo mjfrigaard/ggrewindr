@@ -6,18 +6,18 @@
 \usage{
 theme_wired(
   base_size = 15,
-  base_family = register_font("Arial", "Arial.ttf", "Arial Bold.ttf"),
-  title_family = register_font("Helvetica Neue", "HelveticaNeue.ttc"),
+  base_family = register_font("Arimo"),
+  title_family = register_font("Arimo"),
   mode = c("dark", "light")
 )
 }
 \arguments{
 \item{base_size}{Base font size. Defaults to \code{15}.}
 
-\item{base_family}{Base font family. Defaults to Arial when it's
-available on the system, otherwise \code{"sans"}.}
+\item{base_family}{Base font family. Defaults to Arimo, which
+ships with \code{ggrewindr}.}
 
-\item{title_family}{Title font family. Defaults to Helvetica Neue when
+\item{title_family}{Title font family. Defaults to Arimo when
 it's available, otherwise \code{"sans"}.}
 
 \item{mode}{\code{"dark"} (the default) or \code{"light"}.}
@@ -28,7 +28,7 @@ A \code{ggplot2} theme object.
 \description{
 A \code{ggplot2} theme built from the WIRED (US) November/December 2024 "Big
 Interview" cover: a black background, a white frame and title, a
-Helvetica Neue title, and the cover's red, blue, pink, gray, and steel
+Arimo title, and the cover's red, blue, pink, gray, and steel
 blue marks.
 }
 \details{

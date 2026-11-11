@@ -2,12 +2,12 @@
 #'
 #' A `ggplot2` theme built from a VRML living room: a tan wall background, a
 #' floor brown frame, a pale panel, sofa red, lamp green, black, and glass
-#' marks, and an Andale Mono title.
+#' marks, and an Fira Mono title.
 #'
 #' @param base_size Base font size. Defaults to `15`.
-#' @param base_family Base font family. Defaults to Arial when it's
-#'     available on the system, otherwise `"sans"`.
-#' @param title_family Title font family. Defaults to Andale Mono when
+#' @param base_family Base font family. Defaults to Arimo, which
+#'     ships with `ggrewindr`.
+#' @param title_family Title font family. Defaults to Fira Mono when
 #'     it's available, otherwise `"sans"`.
 #'
 #' @return A `ggplot2` theme object.
@@ -21,9 +21,8 @@
 #'   labs(title = "VRML") +
 #'   theme_vrml(base_family = "sans", title_family = "sans")
 theme_vrml <- function(base_size = 15,
-                      base_family = register_font("Arial", "Arial.ttf",
-                                                  "Arial Bold.ttf"),
-                      title_family = register_font("Andale Mono", "Andale Mono.ttf")) {
+                      base_family = register_font("Arimo"),
+                      title_family = register_font("Fira Mono")) {
   cols <- vrml_cols
   ggplot2::theme_bw(base_size = base_size, base_family = base_family) +
     ggplot2::theme(

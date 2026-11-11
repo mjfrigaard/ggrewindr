@@ -6,17 +6,17 @@
 \usage{
 theme_javaapplet(
   base_size = 15,
-  base_family = register_font("Arial", "Arial.ttf", "Arial Bold.ttf"),
-  title_family = register_font("Verdana", "Verdana Bold.ttf")
+  base_family = register_font("Arimo"),
+  title_family = register_font("Noto Sans", weight = 700)
 )
 }
 \arguments{
 \item{base_size}{Base font size. Defaults to \code{15}.}
 
-\item{base_family}{Base font family. Defaults to Arial when it's
-available on the system, otherwise \code{"sans"}.}
+\item{base_family}{Base font family. Defaults to Arimo, which
+ships with \code{ggrewindr}.}
 
-\item{title_family}{Title font family. Defaults to Verdana when
+\item{title_family}{Title font family. Defaults to Noto Sans when
 it's available, otherwise \code{"sans"}.}
 }
 \value{
@@ -25,7 +25,7 @@ A \code{ggplot2} theme object.
 \description{
 A \code{ggplot2} theme built from a Java AWT applet: a gray window background, a
 gray frame, a white panel, red, blue, purple, and gray marks, and a blue
-Verdana title.
+Noto Sans title.
 }
 \examples{
 library(ggplot2)

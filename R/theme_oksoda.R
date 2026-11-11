@@ -2,12 +2,12 @@
 #'
 #' A `ggplot2` theme built from OK Soda cans (1993 to 1995): a brushed
 #' silver background, a black frame, a gray comic panel, OK red marks and
-#' title, slate and brick accents, and a Courier New title.
+#' title, slate and brick accents, and a Cousine title.
 #'
 #' @param base_size Base font size. Defaults to `15`.
-#' @param base_family Base font family. Defaults to Arial when it's
-#'     available on the system, otherwise `"sans"`.
-#' @param title_family Title font family. Defaults to Courier New when
+#' @param base_family Base font family. Defaults to Arimo, which
+#'     ships with `ggrewindr`.
+#' @param title_family Title font family. Defaults to Cousine when
 #'     it's available, otherwise `"sans"`.
 #'
 #' @return A `ggplot2` theme object.
@@ -21,9 +21,8 @@
 #'   labs(title = "OK Soda") +
 #'   theme_oksoda(base_family = "sans", title_family = "sans")
 theme_oksoda <- function(base_size = 15,
-                      base_family = register_font("Arial", "Arial.ttf",
-                                                  "Arial Bold.ttf"),
-                      title_family = register_font("Courier New", "Courier New Bold.ttf")) {
+                      base_family = register_font("Arimo"),
+                      title_family = register_font("Cousine", weight = 700)) {
   cols <- oksoda_cols
   ggplot2::theme_bw(base_size = base_size, base_family = base_family) +
     ggplot2::theme(

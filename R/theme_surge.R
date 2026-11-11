@@ -2,14 +2,14 @@
 #'
 #' A `ggplot2` theme built from Surge soda: a black background, a Surge
 #' green frame and title, green, red, orange, yellow, and white marks, a
-#' dark to bright green continuous scale, and a DIN Alternate title.
+#' dark to bright green continuous scale, and a Barlow title.
 #'
 #' Use `mode = "light"` for a light background with darker text and marks.
 #'
 #' @param base_size Base font size. Defaults to `15`.
-#' @param base_family Base font family. Defaults to Arial when it's
-#'     available on the system, otherwise `"sans"`.
-#' @param title_family Title font family. Defaults to DIN Alternate when
+#' @param base_family Base font family. Defaults to Arimo, which
+#'     ships with `ggrewindr`.
+#' @param title_family Title font family. Defaults to Barlow when
 #'     it's available, otherwise `"sans"`.
 #' @param mode `"dark"` (the default) or `"light"`.
 #'
@@ -24,9 +24,8 @@
 #'   labs(title = "Surge") +
 #'   theme_surge(base_family = "sans", title_family = "sans")
 theme_surge <- function(base_size = 15,
-                      base_family = register_font("Arial", "Arial.ttf",
-                                                  "Arial Bold.ttf"),
-                      title_family = register_font("DIN Alternate", "DIN Alternate Bold.ttf"),
+                      base_family = register_font("Arimo"),
+                      title_family = register_font("Barlow", weight = 700),
                       mode = c("dark", "light")) {
   mode <- match.arg(mode)
   cols <- surge_cols[[mode]]

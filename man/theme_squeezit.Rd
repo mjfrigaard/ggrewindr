@@ -6,17 +6,17 @@
 \usage{
 theme_squeezit(
   base_size = 15,
-  base_family = register_font("Arial", "Arial.ttf", "Arial Bold.ttf"),
-  title_family = register_font("Skia", "Skia.ttf")
+  base_family = register_font("Arimo"),
+  title_family = register_font("Marcellus")
 )
 }
 \arguments{
 \item{base_size}{Base font size. Defaults to \code{15}.}
 
-\item{base_family}{Base font family. Defaults to Arial when it's
-available on the system, otherwise \code{"sans"}.}
+\item{base_family}{Base font family. Defaults to Arimo, which
+ships with \code{ggrewindr}.}
 
-\item{title_family}{Title font family. Defaults to Skia when
+\item{title_family}{Title font family. Defaults to Marcellus when
 it's available, otherwise \code{"sans"}.}
 }
 \value{
@@ -25,7 +25,7 @@ A \code{ggplot2} theme object.
 \description{
 A \code{ggplot2} theme built from Squeezit drink bottles on gravel: a gravel
 background, a red frame and title, red, orange, green, pink, blue, and gold
-bottle marks, and a Skia title.
+bottle marks, and a Marcellus title.
 }
 \examples{
 library(ggplot2)

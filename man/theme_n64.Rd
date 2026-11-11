@@ -6,18 +6,18 @@
 \usage{
 theme_n64(
   base_size = 15,
-  base_family = register_font("Arial", "Arial.ttf", "Arial Bold.ttf"),
-  title_family = register_font("Arial Black", "Arial Black.ttf")
+  base_family = register_font("Arimo"),
+  title_family = register_font("Archivo Black")
 )
 }
 \arguments{
 \item{base_size}{Base font size. Defaults to \code{15}.}
 
-\item{base_family}{Base font family. Defaults to Arial when it's
-available on the system, otherwise \code{"sans"}.}
+\item{base_family}{Base font family. Defaults to Arimo, which
+ships with \code{ggrewindr}.}
 
-\item{title_family}{Title font family. Defaults to Arial Black when it's
-available on the system, otherwise \code{"sans"}.}
+\item{title_family}{Title font family. Defaults to Archivo Black, which
+ships with \code{ggrewindr}.}
 }
 \value{
 A \code{ggplot2} theme object.
@@ -25,7 +25,7 @@ A \code{ggplot2} theme object.
 \description{
 A late 90s \code{ggplot2} theme modeled on the Nintendo 64: controller gray
 background, charcoal frame, the red, green, blue, and yellow logo
-colors, and an Arial Black title.
+colors, and an Archivo Black title.
 }
 \examples{
 library(ggplot2)

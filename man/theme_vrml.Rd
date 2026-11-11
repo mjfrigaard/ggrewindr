@@ -6,17 +6,17 @@
 \usage{
 theme_vrml(
   base_size = 15,
-  base_family = register_font("Arial", "Arial.ttf", "Arial Bold.ttf"),
-  title_family = register_font("Andale Mono", "Andale Mono.ttf")
+  base_family = register_font("Arimo"),
+  title_family = register_font("Fira Mono")
 )
 }
 \arguments{
 \item{base_size}{Base font size. Defaults to \code{15}.}
 
-\item{base_family}{Base font family. Defaults to Arial when it's
-available on the system, otherwise \code{"sans"}.}
+\item{base_family}{Base font family. Defaults to Arimo, which
+ships with \code{ggrewindr}.}
 
-\item{title_family}{Title font family. Defaults to Andale Mono when
+\item{title_family}{Title font family. Defaults to Fira Mono when
 it's available, otherwise \code{"sans"}.}
 }
 \value{
@@ -25,7 +25,7 @@ A \code{ggplot2} theme object.
 \description{
 A \code{ggplot2} theme built from a VRML living room: a tan wall background, a
 floor brown frame, a pale panel, sofa red, lamp green, black, and glass
-marks, and an Andale Mono title.
+marks, and an Fira Mono title.
 }
 \examples{
 library(ggplot2)

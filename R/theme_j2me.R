@@ -2,12 +2,12 @@
 #'
 #' A `ggplot2` theme built from a Nokia N73 running a J2ME app: a black phone
 #' background, a silver frame, a pale screen panel, Ushahidi red, tan, brown,
-#' and black marks, and an Arial Narrow title.
+#' and black marks, and an Archivo Narrow title.
 #'
 #' @param base_size Base font size. Defaults to `15`.
-#' @param base_family Base font family. Defaults to Arial when it's
-#'     available on the system, otherwise `"sans"`.
-#' @param title_family Title font family. Defaults to Arial Narrow when
+#' @param base_family Base font family. Defaults to Arimo, which
+#'     ships with `ggrewindr`.
+#' @param title_family Title font family. Defaults to Archivo Narrow when
 #'     it's available, otherwise `"sans"`.
 #'
 #' @return A `ggplot2` theme object.
@@ -21,9 +21,8 @@
 #'   labs(title = "J2ME") +
 #'   theme_j2me(base_family = "sans", title_family = "sans")
 theme_j2me <- function(base_size = 15,
-                      base_family = register_font("Arial", "Arial.ttf",
-                                                  "Arial Bold.ttf"),
-                      title_family = register_font("Arial Narrow", "Arial Narrow Bold.ttf")) {
+                      base_family = register_font("Arimo"),
+                      title_family = register_font("Archivo Narrow", weight = 700)) {
   cols <- j2me_cols
   ggplot2::theme_bw(base_size = base_size, base_family = base_family) +
     ggplot2::theme(

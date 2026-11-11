@@ -11,6 +11,7 @@ knitr:
     fig.width: 6
     fig.asp: 0.667
     out.width: "100%"
+    fig.showtext: true
 ---
 
 Each `ggrewindr` theme is built around a late 90s toy, snack, TV show, or piece of technology. This vignette shows every theme with simulated data to match its reference.
@@ -22,12 +23,11 @@ Themes with a dark background also have a light version. Set `mode = "light"` to
 #| message: false
 library(ggrewindr)
 library(ggplot2)
-showtext::showtext_auto()
 ```
 
 ## 3Com Audrey
 
-`theme_audrey()` uses a 3Com Audrey on a kitchen counter: a white plastic background, a black tile frame, teal, navy, tan, brown, and aqua marks, and a teal Arial Rounded title. Below we simulate what 300 households used their Audrey for.
+`theme_audrey()` uses a 3Com Audrey on a kitchen counter: a white plastic background, a black tile frame, teal, navy, tan, brown, and aqua marks, and a teal Varela Round title. Below we simulate what 300 households used their Audrey for.
 
 ![Image: Andrew Turner, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:3Com_Audrey.jpg), CC BY 2.0.](../man/figures/theme_audrey/3com-audrey.jpg){width="60%" fig-align="center"}
 
@@ -190,7 +190,7 @@ last_plot() + theme_consolewars(base_size = 13, mode = "light")
 
 ## CU-SeeMe
 
-`theme_cuseeme()` uses the CU-SeeMe phone book window: a dithered gray background, a black frame, a white panel, black, magenta, and gray marks, and a magenta Tahoma title. Below we simulate video call frame rates over three kinds of connections.
+`theme_cuseeme()` uses the CU-SeeMe phone book window: a dithered gray background, a black frame, a white panel, black, magenta, and gray marks, and a magenta Noto Sans title. Below we simulate video call frame rates over three kinds of connections.
 
 ![Image: Lt Georgios Floros, HN, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:CU-SeeMe_application_screenshot.png), public domain.](../man/figures/theme_cuseeme/cu-seeme-application-screenshot.png){width="60%" fig-align="center"}
 
@@ -207,7 +207,7 @@ ggplot(calls, aes(x = connection, y = fps, color = connection)) +
 
 ## CueCat
 
-`theme_cuecat()` uses the :CueCat barcode scanner: a pale paper background, a putty frame, red, ink, LED orange, and putty marks, and a red Marker Felt title. Below we simulate weekly barcode scans after the free scanners shipped in 2000.
+`theme_cuecat()` uses the :CueCat barcode scanner: a pale paper background, a putty frame, red, ink, LED orange, and putty marks, and a red Permanent Marker title. Below we simulate weekly barcode scans after the free scanners shipped in 2000.
 
 ![Image: Shaddack, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:CueCat-upside.jpg), public domain.](../man/figures/theme_cuecat/cuecat-upside.jpg){width="60%" fig-align="center"}
 
@@ -265,7 +265,7 @@ ggplot(fp, aes(x = season, y = gag, fill = occurrences)) +
 
 ## Fruit Gushers
 
-`theme_gushers()` uses a pile of Fruit Gushers on a white plate: a red frame and title, red, green, teal, orange, and pink marks, and a Chalkboard title. Below we simulate fruit snack trades at one lunch table before and after Gushers arrived in 1991.
+`theme_gushers()` uses a pile of Fruit Gushers on a white plate: a red frame and title, red, green, teal, orange, and pink marks, and a Patrick Hand title. Below we simulate fruit snack trades at one lunch table before and after Gushers arrived in 1991.
 
 ![Image: Thomson200, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Betty_Crocker_Fruit_Gushers_pieces.jpg), CC0.](../man/figures/theme_gushers/betty-crocker-fruit-gushers-pieces.jpg){width="50%" fig-align="center"}
 
@@ -303,7 +303,7 @@ ggplot(pokemon_starters, aes(x = starter, fill = starter)) +
 
 ## GeoCities
 
-`theme_geocities()`: lime text and a yellow Comic Sans title on a dark navy panel. Below we simulate GeoCities page loads.
+`theme_geocities()`: lime text and a yellow Comic Neue title on a dark navy panel. Below we simulate GeoCities page loads.
 
 ![Image: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:GeoCities_logo.svg), public domain.](../man/figures/theme_geocities/geocities-logo.png){width="60%" fig-align="center"}
 
@@ -327,7 +327,7 @@ last_plot() + theme_geocities(base_size = 13, mode = "light")
 
 ## Goosebumps
 
-`theme_goosebumps()`: the slime green logo and purple covers of the Goosebumps books on black, with a Trattatello title. Below we simulate Goosebumps books read by two grades.
+`theme_goosebumps()`: the slime green logo and purple covers of the Goosebumps books on black, with a Uncial Antiqua title. Below we simulate Goosebumps books read by two grades.
 
 ```{r}
 #| label: goosebumps
@@ -349,7 +349,7 @@ last_plot() + theme_goosebumps(base_size = 13, mode = "light")
 
 ## Handspring Visor
 
-`theme_visor()` uses a green Handspring Visor Deluxe: a pale lavender background, a translucent green frame, a gray LCD panel, green, gray, mint, and silver marks, and a Trebuchet MS title. Below we simulate sales of four Springboard modules.
+`theme_visor()` uses a green Handspring Visor Deluxe: a pale lavender background, a translucent green frame, a gray LCD panel, green, gray, mint, and silver marks, and a Fira Sans title. Below we simulate sales of four Springboard modules.
 
 ![Image: Waldohreule, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Handspring_Visor_DeLuxe_Green.jpg), CC BY-SA 3.0.](../man/figures/theme_visor/handspring-visor-deluxe-green.jpg){width="40%" fig-align="center"}
 
@@ -410,7 +410,7 @@ last_plot() + theme_hypercolor(base_size = 13, mode = "light")
 
 ## IBM Microdrive
 
-`theme_microdrive()` uses an IBM and a Hitachi Microdrive on a tan desk: a black frame, IBM blue, red, navy, and Hitachi sky blue marks, and a red Times New Roman title. Below we simulate photo file sizes from three digital cameras that wrote to a Microdrive.
+`theme_microdrive()` uses an IBM and a Hitachi Microdrive on a tan desk: a black frame, IBM blue, red, navy, and Hitachi sky blue marks, and a red Tinos title. Below we simulate photo file sizes from three digital cameras that wrote to a Microdrive.
 
 ![Image: MiNe, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:IBM_340MB_Microdrive_and_Hitachi_1GB_Microdrive_sold_from_Weikeng_Industrial_20080327.jpg), CC BY 2.0.](../man/figures/theme_microdrive/ibm-340mb-microdrive.jpg){width="60%" fig-align="center"}
 
@@ -427,7 +427,7 @@ ggplot(photos, aes(x = camera, y = mb, fill = camera)) +
 
 ## J2ME
 
-`theme_j2me()` uses a Nokia N73 running a J2ME app: a black phone background, a silver frame, a pale screen panel, Ushahidi red, tan, brown, and black marks, and an Arial Narrow title. Below we simulate monthly downloads of four kinds of phone games.
+`theme_j2me()` uses a Nokia N73 running a J2ME app: a black phone background, a silver frame, a pale screen panel, Ushahidi red, tan, brown, and black marks, and an Archivo Narrow title. Below we simulate monthly downloads of four kinds of phone games.
 
 ![Image: Erik (HASH) Hersman, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Ushahidi_J2ME_App.jpg), CC BY 2.0.](../man/figures/theme_j2me/ushahidi-j2me-app.jpg){width="60%" fig-align="center"}
 
@@ -444,7 +444,7 @@ ggplot(games, aes(x = month, y = downloads, color = genre)) +
 
 ## Java applets
 
-`theme_javaapplet()` uses a Java AWT applet window: a gray window background, a gray frame, a white panel, red, blue, purple, and gray marks, and a blue Verdana title. Below we simulate measurements with error bars and a fitted curve, like the applet in the screenshot.
+`theme_javaapplet()` uses a Java AWT applet window: a gray window background, a gray frame, a white panel, red, blue, purple, and gray marks, and a blue Noto Sans title. Below we simulate measurements with error bars and a fitted curve, like the applet in the screenshot.
 
 ![Image: Audrius Meskauskas, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Java_applet.png), public domain.](../man/figures/theme_javaapplet/java-applet.png){width="60%" fig-align="center"}
 
@@ -488,7 +488,7 @@ last_plot() + theme_jurassic(base_size = 13, mode = "light")
 
 ## Koosh ball
 
-`theme_koosh()` uses a tri color Koosh ball: a white background, an orange frame, orange, purple, and black marks, and an Arial Rounded title. Below we simulate the styles of 200 Koosh balls sold at a toy store.
+`theme_koosh()` uses a tri color Koosh ball: a white background, an orange frame, orange, purple, and black marks, and an Varela Round title. Below we simulate the styles of 200 Koosh balls sold at a toy store.
 
 ![Image: Evan-Amos, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Koosh-Ball-TriColor.jpg), public domain.](../man/figures/theme_koosh/koosh-ball-tricolor.jpg){width="50%" fig-align="center"}
 
@@ -506,7 +506,7 @@ ggplot(koosh_balls, aes(x = style, fill = style)) +
 
 ## Netscape
 
-`theme_netscape()`: the Netscape Navigator logo, with a night sky background, teal, aurora green, sea glass, and deep teal marks, and a Times New Roman title. Below we simulate dial up speeds for three modems.
+`theme_netscape()`: the Netscape Navigator logo, with a night sky background, teal, aurora green, sea glass, and deep teal marks, and a Tinos title. Below we simulate dial up speeds for three modems.
 
 ![Image: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Netscape_Navigator_Icon.svg), CC0.](../man/figures/theme_netscape/netscape-navigator-icon.png){width="60%" fig-align="center"}
 
@@ -548,7 +548,7 @@ ggplot(mario_kart_laps, aes(x = "", y = seconds)) +
 
 ## Novell NetWare
 
-`theme_netware()` uses three NetWare 2.0 boxes: a pale blush background with dark ink text, a NetWare red frame and title, maroon, red, rose, and blush marks, and a Gill Sans title. Below we simulate the file servers running each NetWare version from 1990 to 1998.
+`theme_netware()` uses three NetWare 2.0 boxes: a pale blush background with dark ink text, a NetWare red frame and title, maroon, red, rose, and blush marks, and a Cabin title. Below we simulate the file servers running each NetWare version from 1990 to 1998.
 
 ![Image: diaper on Flickr, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Novell_NetWare_2.0_packages.jpg), CC BY 2.0.](../man/figures/theme_netware/novell-netware-2-0-packages.jpg){width="50%" fig-align="center"}
 
@@ -566,7 +566,7 @@ ggplot(servers, aes(x = year, y = n, fill = version)) +
 
 ## OK Soda
 
-`theme_oksoda()` uses the gray comic book cans Coca-Cola sold from 1993 to 1995: brushed silver, black ink, OK red bars, slate and brick accents, and an OK red Courier New title. Below we simulate one day of sales at 300 test market stores from a normal distribution.
+`theme_oksoda()` uses the gray comic book cans Coca-Cola sold from 1993 to 1995: brushed silver, black ink, OK red bars, slate and brick accents, and an OK red Cousine title. Below we simulate one day of sales at 300 test market stores from a normal distribution.
 
 ![Image: TeemPlayer, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:OK_Soda_Original_4.jpg), CC BY-SA 3.0.](../man/figures/theme_oksoda/ok-soda-original-4.jpg){width="60%" fig-align="center"}
 
@@ -586,7 +586,7 @@ ggplot(ok_soda_sales, aes(x = cans)) +
 
 ## Orbitz
 
-`theme_orbitz()` uses a bottle of Orbitz, the 1997 drink with floating gel balls: a black background, a gold frame, gold and magenta marks, and a Marker Felt title. Below we compare the share of kids buying Orbitz and Surge each week after Orbitz arrived.
+`theme_orbitz()` uses a bottle of Orbitz, the 1997 drink with floating gel balls: a black background, a gold frame, gold and magenta marks, and a Permanent Marker title. Below we compare the share of kids buying Orbitz and Surge each week after Orbitz arrived.
 
 ![Image: Jesse! S?, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Bottle_of_Orbitz_drink.jpg), CC BY 2.0.](../man/figures/theme_orbitz/bottle-of-orbitz-drink.jpg){width="40%" fig-align="center"}
 
@@ -636,7 +636,7 @@ last_plot() + theme_oregontrail(base_size = 13, mode = "light")
 
 ## Palm Pilot
 
-`theme_palmpilot()` uses a PalmPilot Professional: a charcoal case background, a HotSync teal frame, a green LCD panel, ink, LCD green, plum, and teal marks, and a white Futura title. Below we simulate how Graffiti accuracy improves over a user's first ten weeks.
+`theme_palmpilot()` uses a PalmPilot Professional: a charcoal case background, a HotSync teal frame, a green LCD panel, ink, LCD green, plum, and teal marks, and a white Jost title. Below we simulate how Graffiti accuracy improves over a user's first ten weeks.
 
 ![Image: Museo8bits, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Palm_Pilot_Professional_01.JPG), CC BY-SA 3.0.](../man/figures/theme_palmpilot/palm-pilot-professional-01.jpg){width="40%" fig-align="center"}
 
@@ -773,7 +773,7 @@ ggplot(walkman, aes(x = hours, y = model)) +
 
 ## Squeezit
 
-`theme_squeezit()` uses Squeezit bottles standing in gravel: a gravel background, a red frame and title, red, orange, green, pink, blue, and gold marks, and a Skia title. Below we use a gamma distribution to simulate the seconds it took to finish three flavors.
+`theme_squeezit()` uses Squeezit bottles standing in gravel: a gravel background, a red frame and title, red, orange, green, pink, blue, and gold marks, and a Marcellus title. Below we use a gamma distribution to simulate the seconds it took to finish three flavors.
 
 ![Image: ZolHaj, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Squeezeit-flavours.jpg), CC BY-SA 4.0.](../man/figures/theme_squeezit/squeezeit-flavours.jpg){width="40%" fig-align="center"}
 
@@ -834,7 +834,7 @@ last_plot() + theme_surge(base_size = 13, mode = "light")
 
 ## Talkboy
 
-`theme_talkboy()` uses the Deluxe Talkboy from *Home Alone 2* sitting on a walnut table: a silver panel, button blue marks, and a Brush Script title. Below we simulate the length of 300 recorded messages from a right skewed gamma distribution.
+`theme_talkboy()` uses the Deluxe Talkboy from *Home Alone 2* sitting on a walnut table: a silver panel, button blue marks, and a Kaushan Script title. Below we simulate the length of 300 recorded messages from a right skewed gamma distribution.
 
 ![Image: Y2kcrazyjoker4, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Deluxe_Talkboy_on_table.jpg), CC BY-SA 4.0.](../man/figures/theme_talkboy/deluxe-talkboy-on-table.jpg){width="60%" fig-align="center"}
 
@@ -895,7 +895,7 @@ last_plot() + theme_tetris(base_size = 13, mode = "light")
 
 ## Tiger R-Zone
 
-`theme_rzone()` uses Tiger's 1995 R-Zone headset: black plastic, a red frame and title, red LCD, purple, and pink marks, pale blue visor text, and an Arial Narrow title. Below we simulate the seconds 100 players needed to clear the first level on two tries.
+`theme_rzone()` uses Tiger's 1995 R-Zone headset: black plastic, a red frame and title, red LCD, purple, and pink marks, pale blue visor text, and an Archivo Narrow title. Below we simulate the seconds 100 players needed to clear the first level on two tries.
 
 ![Image: Evan-Amos, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Tiger-RZone-Headset.jpg), public domain.](../man/figures/theme_rzone/tiger-rzone-headset.jpg){width="60%" fig-align="center"}
 
@@ -920,7 +920,7 @@ last_plot() + theme_rzone(base_size = 13, mode = "light")
 
 ## Titanic
 
-`theme_titanic()`: the Vallejo Titanic Colors paint set (black, yellow, canvas, anti-fouling red, faded yellow, stone, and wood deck) with a Big Caslon title. Below we simulate how many times teens and adults saw the movie.
+`theme_titanic()`: the Vallejo Titanic Colors paint set (black, yellow, canvas, anti-fouling red, faded yellow, stone, and wood deck) with a Libre Caslon Display title. Below we simulate how many times teens and adults saw the movie.
 
 ![Image: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Titanic_in_color.png), public domain.](../man/figures/theme_titanic/titanic-in-color.png){width="60%" fig-align="center"}
 
@@ -937,7 +937,7 @@ ggplot(fans, aes(x = age_group, fill = viewings)) +
 
 ## Two-way pagers
 
-`theme_pager()` uses a RIM 950 pager on concrete: a charcoal frame and title, a pale LCD panel, charcoal, orange, and slate marks, and an Arial Black title. Below we simulate the messages one pager received in each hour of a workday.
+`theme_pager()` uses a RIM 950 pager on concrete: a charcoal frame and title, a pale LCD panel, charcoal, orange, and slate marks, and an Archivo Black title. Below we simulate the messages one pager received in each hour of a workday.
 
 ![Image: Ruben de Rijcke, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:RIM_BlackBerry_950.jpg), CC BY-SA 4.0.](../man/figures/theme_pager/rim-blackberry-950.jpg){width="60%" fig-align="center"}
 
@@ -954,7 +954,7 @@ ggplot(pages, aes(x = hour, y = messages)) +
 
 ## VRML
 
-`theme_vrml()` uses a VRML living room: a tan wall background, a floor brown frame, a pale panel, sofa red, lamp green, black, and glass marks, and an Andale Mono title. Below we simulate render times for four VRML scenes.
+`theme_vrml()` uses a VRML living room: a tan wall background, a floor brown frame, a pale panel, sofa red, lamp green, black, and glass marks, and an Fira Mono title. Below we simulate render times for four VRML scenes.
 
 ![Image: Jan Křivka, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Interior.png), public domain.](../man/figures/theme_vrml/interior.png){width="50%" fig-align="center"}
 
@@ -972,7 +972,7 @@ ggplot(scenes, aes(x = polygons, y = seconds, color = scene)) +
 
 ## WIRED
 
-`theme_wired()` uses the WIRED (US) November/December 2024 "Big Interview" cover: a black background, a white frame, a bold Helvetica Neue title, and the cover's red, blue, pink, gray, and steel blue marks. Below we simulate the lengths of 400 interviews in two formats.
+`theme_wired()` uses the WIRED (US) November/December 2024 "Big Interview" cover: a black background, a white frame, a bold Arimo title, and the cover's red, blue, pink, gray, and steel blue marks. Below we simulate the lengths of 400 interviews in two formats.
 
 ![Image: WIRED (US), November/December 2024 cover, via [Wikipedia](https://en.wikipedia.org/wiki/File:Wired_US_magazine_November-December_2024_cover.webp) (non-free, linked rather than hosted).](https://upload.wikimedia.org/wikipedia/en/8/86/Wired_US_magazine_November-December_2024_cover.webp){width="40%" fig-align="center"}
 
@@ -1024,56 +1024,56 @@ last_plot() + theme_y2k(base_size = 13, mode = "light")
 
 ## Fonts
 
-`theme_gameboy()` and `theme_tetris()` use Press Start 2P, which ships with `ggrewindr`. The other themes use fonts that ship with macOS and Windows.
+`theme_gameboy()` and `theme_tetris()` use Press Start 2P, which ships with `ggrewindr`. The other themes use open source fonts from Google Fonts, and they ship with `ggrewindr` too. Each font keeps its license (SIL Open Font License or Apache License) next to it in the `assets` folder (see `font_path()`), so the themes look the same on macOS, Windows, and Linux.
 
-These themes use Arial for the body text and a display font for the title:
+These themes use Arimo for the body text and a display font for the title:
 
-* Impact (`theme_blockbuster()`)
-* Arial Black (`theme_n64()` and `theme_freshprince()`)
-* Herculanum (`theme_jurassic()`)
-* Arial Rounded (`theme_happymeal()`)
-* Bradley Hand (`theme_pogs()`)
-* DIN Condensed (`theme_walkman()`)
-* Courier New (`theme_oksoda()`)
-* Brush Script (`theme_talkboy()`)
-* Helvetica Neue (`theme_wired()`)
-* Marker Felt (`theme_orbitz()`)
-* Times New Roman (`theme_netscape()`)
-* Big Caslon (`theme_titanic()`)
-* Arial Rounded (`theme_koosh()`)
-* Futura (`theme_tamagotchi()`)
-* Arial Black (`theme_supersoaker()`)
-* Trattatello (`theme_goosebumps()`)
-* Skia (`theme_squeezit()`)
-* Andale Mono (`theme_oregontrail()`)
-* Arial Rounded (`theme_aim()`)
-* Arial Narrow (`theme_rzone()`)
-* DIN Condensed (`theme_batman()`)
-* Arial Black (`theme_snick()`)
-* SignPainter (`theme_savedbythebell()`)
-* Gill Sans (`theme_hypercolor()`)
+* Anton (`theme_blockbuster()`)
+* Archivo Black (`theme_n64()` and `theme_freshprince()`)
+* Macondo (`theme_jurassic()`)
+* Varela Round (`theme_happymeal()`)
+* Caveat (`theme_pogs()`)
+* Barlow Condensed (`theme_walkman()`)
+* Cousine (`theme_oksoda()`)
+* Kaushan Script (`theme_talkboy()`)
+* Arimo (`theme_wired()`)
+* Permanent Marker (`theme_orbitz()`)
+* Tinos (`theme_netscape()`)
+* Libre Caslon Display (`theme_titanic()`)
+* Varela Round (`theme_koosh()`)
+* Jost (`theme_tamagotchi()`)
+* Archivo Black (`theme_supersoaker()`)
+* Uncial Antiqua (`theme_goosebumps()`)
+* Marcellus (`theme_squeezit()`)
+* Fira Mono (`theme_oregontrail()`)
+* Varela Round (`theme_aim()`)
+* Archivo Narrow (`theme_rzone()`)
+* Barlow Condensed (`theme_batman()`)
+* Archivo Black (`theme_snick()`)
+* Yellowtail (`theme_savedbythebell()`)
+* Cabin (`theme_hypercolor()`)
 * PT Mono (`theme_y2k()`)
-* Chalkboard (`theme_gushers()`)
-* Impact (`theme_doom()`)
-* Krungthep (`theme_consolewars()`)
-* American Typewriter (`theme_seinfeld()`)
-* Copperplate (`theme_powerrangers()`)
-* Rockwell (`theme_bopit()`)
-* Comic Sans MS (`theme_geocities()`)
-* DIN Alternate (`theme_surge()`)
-* Times New Roman (`theme_microdrive()`)
-* Gill Sans (`theme_netware()`)
-* Arial Narrow (`theme_j2me()`)
-* Futura (`theme_palmpilot()`)
-* Trebuchet MS (`theme_visor()`)
-* Arial Black (`theme_pager()`)
-* Tahoma (`theme_cuseeme()`)
-* Andale Mono (`theme_vrml()`)
-* Verdana (`theme_javaapplet()`)
-* Marker Felt (`theme_cuecat()`)
-* Arial Rounded (`theme_audrey()`)
+* Patrick Hand (`theme_gushers()`)
+* Anton (`theme_doom()`)
+* Russo One (`theme_consolewars()`)
+* Special Elite (`theme_seinfeld()`)
+* Cormorant SC (`theme_powerrangers()`)
+* Arvo (`theme_bopit()`)
+* Comic Neue (`theme_geocities()`)
+* Barlow (`theme_surge()`)
+* Tinos (`theme_microdrive()`)
+* Cabin (`theme_netware()`)
+* Archivo Narrow (`theme_j2me()`)
+* Jost (`theme_palmpilot()`)
+* Fira Sans (`theme_visor()`)
+* Archivo Black (`theme_pager()`)
+* Noto Sans (`theme_cuseeme()`)
+* Fira Mono (`theme_vrml()`)
+* Noto Sans (`theme_javaapplet()`)
+* Permanent Marker (`theme_cuecat()`)
+* Varela Round (`theme_audrey()`)
 
-When a font file can't be found, the theme falls back to `"sans"`, so the plots above still render on Linux. You can also pass any family you've registered with `sysfonts::font_add()`:
+When a font file can't be found, the theme falls back to `"sans"`. You can also pass any family you've registered with `sysfonts::font_add()`:
 
 ```{r}
 #| label: family

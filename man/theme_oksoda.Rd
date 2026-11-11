@@ -6,17 +6,17 @@
 \usage{
 theme_oksoda(
   base_size = 15,
-  base_family = register_font("Arial", "Arial.ttf", "Arial Bold.ttf"),
-  title_family = register_font("Courier New", "Courier New Bold.ttf")
+  base_family = register_font("Arimo"),
+  title_family = register_font("Cousine", weight = 700)
 )
 }
 \arguments{
 \item{base_size}{Base font size. Defaults to \code{15}.}
 
-\item{base_family}{Base font family. Defaults to Arial when it's
-available on the system, otherwise \code{"sans"}.}
+\item{base_family}{Base font family. Defaults to Arimo, which
+ships with \code{ggrewindr}.}
 
-\item{title_family}{Title font family. Defaults to Courier New when
+\item{title_family}{Title font family. Defaults to Cousine when
 it's available, otherwise \code{"sans"}.}
 }
 \value{
@@ -25,7 +25,7 @@ A \code{ggplot2} theme object.
 \description{
 A \code{ggplot2} theme built from OK Soda cans (1993 to 1995): a brushed
 silver background, a black frame, a gray comic panel, OK red marks and
-title, slate and brick accents, and a Courier New title.
+title, slate and brick accents, and a Cousine title.
 }
 \examples{
 library(ggplot2)

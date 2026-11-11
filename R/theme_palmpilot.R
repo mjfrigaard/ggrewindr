@@ -2,12 +2,12 @@
 #'
 #' A `ggplot2` theme built from a PalmPilot Professional: a charcoal case
 #' background, a teal frame, a green LCD panel, ink, LCD green, plum, and
-#' teal marks, and a white Futura title.
+#' teal marks, and a white Jost title.
 #'
 #' @param base_size Base font size. Defaults to `15`.
-#' @param base_family Base font family. Defaults to Arial when it's
-#'     available on the system, otherwise `"sans"`.
-#' @param title_family Title font family. Defaults to Futura when
+#' @param base_family Base font family. Defaults to Arimo, which
+#'     ships with `ggrewindr`.
+#' @param title_family Title font family. Defaults to Jost when
 #'     it's available, otherwise `"sans"`.
 #'
 #' @return A `ggplot2` theme object.
@@ -21,9 +21,8 @@
 #'   labs(title = "Palm Pilot") +
 #'   theme_palmpilot(base_family = "sans", title_family = "sans")
 theme_palmpilot <- function(base_size = 15,
-                      base_family = register_font("Arial", "Arial.ttf",
-                                                  "Arial Bold.ttf"),
-                      title_family = register_font("Futura", "Futura.ttc")) {
+                      base_family = register_font("Arimo"),
+                      title_family = register_font("Jost")) {
   cols <- palmpilot_cols
   ggplot2::theme_bw(base_size = base_size, base_family = base_family) +
     ggplot2::theme(

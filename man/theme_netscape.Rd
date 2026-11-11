@@ -6,19 +6,19 @@
 \usage{
 theme_netscape(
   base_size = 15,
-  base_family = register_font("Arial", "Arial.ttf", "Arial Bold.ttf"),
-  title_family = register_font("Times New Roman", "Times New Roman Bold.ttf"),
+  base_family = register_font("Arimo"),
+  title_family = register_font("Tinos", weight = 700),
   mode = c("dark", "light")
 )
 }
 \arguments{
 \item{base_size}{Base font size. Defaults to \code{15}.}
 
-\item{base_family}{Base font family. Defaults to Arial when it's
-available on the system, otherwise \code{"sans"}.}
+\item{base_family}{Base font family. Defaults to Arimo, which
+ships with \code{ggrewindr}.}
 
-\item{title_family}{Title font family. Defaults to Times New Roman Bold when
-it's available on the system, otherwise \code{"sans"}.}
+\item{title_family}{Title font family. Defaults to Tinos (bold), which
+ships with \code{ggrewindr}.}
 
 \item{mode}{\code{"dark"} (the default) or \code{"light"}.}
 }
@@ -28,7 +28,7 @@ A \code{ggplot2} theme object.
 \description{
 A late 90s \code{ggplot2} theme modeled on the Netscape Navigator logo: a night
 sky background, a teal frame, teal, aurora green, sea glass, and deep teal
-marks, and a glowing teal Times New Roman title.
+marks, and a glowing teal Tinos title.
 }
 \details{
 Use \code{mode = "light"} for a light background with darker text and marks.

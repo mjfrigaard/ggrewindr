@@ -1,7 +1,7 @@
 #' Seinfeld theme
 #'
 #' A `ggplot2` theme built from the Seinfeld logo: the black drop shadow
-#' background, a yellow frame, a red American Typewriter title, white text,
+#' background, a yellow frame, a red Special Elite title, white text,
 #' and yellow, red, cyan, and white marks.
 #'
 #' Use `mode = "light"` for the logo's yellow oval as the background, with a
@@ -9,9 +9,9 @@
 #' marks outlined in black.
 #'
 #' @param base_size Base font size. Defaults to `15`.
-#' @param base_family Base font family. Defaults to Arial when it's
-#'     available on the system, otherwise `"sans"`.
-#' @param title_family Title font family. Defaults to American Typewriter when
+#' @param base_family Base font family. Defaults to Arimo, which
+#'     ships with `ggrewindr`.
+#' @param title_family Title font family. Defaults to Special Elite when
 #'     it's available, otherwise `"sans"`.
 #' @param mode `"dark"` (the default) or `"light"`.
 #'
@@ -26,9 +26,8 @@
 #'   labs(title = "Seinfeld") +
 #'   theme_seinfeld(base_family = "sans", title_family = "sans")
 theme_seinfeld <- function(base_size = 15,
-                      base_family = register_font("Arial", "Arial.ttf",
-                                                  "Arial Bold.ttf"),
-                      title_family = register_font("American Typewriter", "AmericanTypewriter.ttc"),
+                      base_family = register_font("Arimo"),
+                      title_family = register_font("Special Elite"),
                       mode = c("dark", "light")) {
   mode <- match.arg(mode)
   cols <- seinfeld_cols[[mode]]

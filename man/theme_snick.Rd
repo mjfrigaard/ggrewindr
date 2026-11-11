@@ -6,18 +6,18 @@
 \usage{
 theme_snick(
   base_size = 15,
-  base_family = register_font("Arial", "Arial.ttf", "Arial Bold.ttf"),
-  title_family = register_font("Arial Black", "Arial Black.ttf"),
+  base_family = register_font("Arimo"),
+  title_family = register_font("Archivo Black"),
   mode = c("dark", "light")
 )
 }
 \arguments{
 \item{base_size}{Base font size. Defaults to \code{15}.}
 
-\item{base_family}{Base font family. Defaults to Arial when it's
-available on the system, otherwise \code{"sans"}.}
+\item{base_family}{Base font family. Defaults to Arimo, which
+ships with \code{ggrewindr}.}
 
-\item{title_family}{Title font family. Defaults to Arial Black when
+\item{title_family}{Title font family. Defaults to Archivo Black when
 it's available, otherwise \code{"sans"}.}
 
 \item{mode}{\code{"dark"} (the default) or \code{"light"}.}
@@ -28,7 +28,7 @@ A \code{ggplot2} theme object.
 \description{
 A \code{ggplot2} theme built from Nickelodeon's Saturday night block
 (SNICK): a night purple background, a Nickelodeon orange frame and
-title, slime green, purple, blue, yellow, and pink marks, and an Arial
+title, slime green, purple, blue, yellow, and pink marks, and an Arimo
 Black title.
 }
 \details{

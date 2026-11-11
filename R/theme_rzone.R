@@ -2,14 +2,14 @@
 #'
 #' A `ggplot2` theme built from the Tiger R-Zone headset (1995): black
 #' plastic, a red frame and title, red LCD, purple logo, and pink marks, a
-#' pale blue visor text color, and an Arial Narrow title.
+#' pale blue visor text color, and an Archivo Narrow title.
 #'
 #' Use `mode = "light"` for a light background with darker text and marks.
 #'
 #' @param base_size Base font size. Defaults to `15`.
-#' @param base_family Base font family. Defaults to Arial when it's
-#'     available on the system, otherwise `"sans"`.
-#' @param title_family Title font family. Defaults to Arial Narrow when
+#' @param base_family Base font family. Defaults to Arimo, which
+#'     ships with `ggrewindr`.
+#' @param title_family Title font family. Defaults to Archivo Narrow when
 #'     it's available, otherwise `"sans"`.
 #' @param mode `"dark"` (the default) or `"light"`.
 #'
@@ -24,9 +24,8 @@
 #'   labs(title = "R-Zone") +
 #'   theme_rzone(base_family = "sans", title_family = "sans")
 theme_rzone <- function(base_size = 15,
-                      base_family = register_font("Arial", "Arial.ttf",
-                                                  "Arial Bold.ttf"),
-                      title_family = register_font("Arial Narrow", "Arial Narrow Bold.ttf"),
+                      base_family = register_font("Arimo"),
+                      title_family = register_font("Archivo Narrow", weight = 700),
                       mode = c("dark", "light")) {
   mode <- match.arg(mode)
   cols <- rzone_cols[[mode]]

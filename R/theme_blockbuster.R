@@ -1,16 +1,16 @@
 #' Blockbuster theme
 #'
 #' A late 90s `ggplot2` theme modeled on a Blockbuster Video store: royal
-#' blue background, yellow ticket stub marks, white Arial text, and an
-#' Impact title.
+#' blue background, yellow ticket stub marks, white Arimo text, and an
+#' Anton title.
 #'
 #' Use `mode = "light"` for a light background with darker text and marks.
 #'
 #' @param base_size Base font size. Defaults to `15`.
-#' @param base_family Base font family. Defaults to Arial when it's
-#'     available on the system, otherwise `"sans"`.
-#' @param title_family Title font family. Defaults to Impact when it's
-#'     available on the system, otherwise `"sans"`.
+#' @param base_family Base font family. Defaults to Arimo, which
+#'     ships with `ggrewindr`.
+#' @param title_family Title font family. Defaults to Anton, which
+#'     ships with `ggrewindr`.
 #' @param mode `"dark"` (the default) or `"light"`.
 #'
 #' @return A `ggplot2` theme object.
@@ -24,9 +24,8 @@
 #'   labs(title = "Blockbuster") +
 #'   theme_blockbuster(base_family = "sans", title_family = "sans")
 theme_blockbuster <- function(base_size = 15,
-                              base_family = register_font("Arial", "Arial.ttf",
-                                                          "Arial Bold.ttf"),
-                              title_family = register_font("Impact", "Impact.ttf"),
+                              base_family = register_font("Arimo"),
+                              title_family = register_font("Anton"),
                               mode = c("dark", "light")) {
   mode <- match.arg(mode)
   cols <- blockbuster_cols[[mode]]

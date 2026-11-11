@@ -2,13 +2,13 @@
 #'
 #' A `ggplot2` theme built from the Saved by the Bell logo: a black
 #' background with a royal blue frame, a white classroom panel, sky blue,
-#' pink, yellow, orange, royal blue, and navy marks, and a yellow SignPainter
+#' pink, yellow, orange, royal blue, and navy marks, and a yellow Yellowtail
 #' title.
 #'
 #' @param base_size Base font size. Defaults to `15`.
-#' @param base_family Base font family. Defaults to Arial when it's
-#'     available on the system, otherwise `"sans"`.
-#' @param title_family Title font family. Defaults to SignPainter when
+#' @param base_family Base font family. Defaults to Arimo, which
+#'     ships with `ggrewindr`.
+#' @param title_family Title font family. Defaults to Yellowtail when
 #'     it's available, otherwise `"sans"`.
 #'
 #' @return A `ggplot2` theme object.
@@ -22,9 +22,8 @@
 #'   labs(title = "Saved by the Bell") +
 #'   theme_savedbythebell(base_family = "sans", title_family = "sans")
 theme_savedbythebell <- function(base_size = 15,
-                      base_family = register_font("Arial", "Arial.ttf",
-                                                  "Arial Bold.ttf"),
-                      title_family = register_font("SignPainter", "SignPainter.ttc")) {
+                      base_family = register_font("Arimo"),
+                      title_family = register_font("Yellowtail")) {
   cols <- savedbythebell_cols
   ggplot2::theme_bw(base_size = base_size, base_family = base_family) +
     ggplot2::theme(

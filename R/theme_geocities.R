@@ -7,9 +7,9 @@
 #' Use `mode = "light"` for a light background with darker text and marks.
 #'
 #' @param base_size Base font size. Defaults to `15`.
-#' @param base_family Base font family. Defaults to Arial when it's
-#'     available on the system, otherwise `"sans"`.
-#' @param title_family Title font family. Defaults to Comic Sans MS when
+#' @param base_family Base font family. Defaults to Arimo, which
+#'     ships with `ggrewindr`.
+#' @param title_family Title font family. Defaults to Comic Neue when
 #'     it's available, otherwise `"sans"`.
 #' @param mode `"dark"` (the default) or `"light"`.
 #'
@@ -24,9 +24,8 @@
 #'   labs(title = "GeoCities") +
 #'   theme_geocities(base_family = "sans", title_family = "sans")
 theme_geocities <- function(base_size = 15,
-                      base_family = register_font("Arial", "Arial.ttf",
-                                                  "Arial Bold.ttf"),
-                      title_family = register_font("Comic Sans MS", "Comic Sans MS Bold.ttf"),
+                      base_family = register_font("Arimo"),
+                      title_family = register_font("Comic Neue", weight = 700),
                       mode = c("dark", "light")) {
   mode <- match.arg(mode)
   cols <- geocities_cols[[mode]]

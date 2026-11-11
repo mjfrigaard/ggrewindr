@@ -84,6 +84,7 @@ The two graphs below use `theme_oksoda()` and `theme_talkboy()` with simulated d
 library(ggrewindr)
 library(ggplot2)
 showtext::showtext_auto()
+showtext::showtext_opts(dpi = 150) # match the figure dpi set above
 set.seed(1014)
 ok_soda_sales <- data.frame(cans = round(rnorm(300, mean = 45, sd = 12)))
 ggplot(ok_soda_sales, aes(x = cans)) +

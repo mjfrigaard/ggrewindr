@@ -6,10 +6,10 @@
 #' Condensed title.
 #'
 #' @param base_size Base font size. Defaults to `15`.
-#' @param base_family Base font family. Defaults to Arial when it's
-#'     available on the system, otherwise `"sans"`.
-#' @param title_family Title font family. Defaults to DIN Condensed when
-#'     it's available on the system, otherwise `"sans"`.
+#' @param base_family Base font family. Defaults to Arimo, which
+#'     ships with `ggrewindr`.
+#' @param title_family Title font family. Defaults to Barlow Condensed, which
+#'     ships with `ggrewindr`.
 #'
 #' @return A `ggplot2` theme object.
 #'
@@ -22,9 +22,8 @@
 #'   labs(title = "Walkman") +
 #'   theme_walkman(base_family = "sans", title_family = "sans")
 theme_walkman <- function(base_size = 15,
-                      base_family = register_font("Arial", "Arial.ttf",
-                                                  "Arial Bold.ttf"),
-                      title_family = register_font("DIN Condensed", "DIN Condensed Bold.ttf")) {
+                      base_family = register_font("Arimo"),
+                      title_family = register_font("Barlow Condensed", weight = 700)) {
   cols <- walkman_cols
   ggplot2::theme_bw(base_size = base_size, base_family = base_family) +
     ggplot2::theme(

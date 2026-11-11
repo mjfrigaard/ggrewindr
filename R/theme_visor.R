@@ -2,12 +2,12 @@
 #'
 #' A `ggplot2` theme built from a green Handspring Visor Deluxe: a pale
 #' lavender background, a translucent green frame, a gray LCD panel, green,
-#' gray, mint, and silver marks, and a Trebuchet MS title.
+#' gray, mint, and silver marks, and a Fira Sans title.
 #'
 #' @param base_size Base font size. Defaults to `15`.
-#' @param base_family Base font family. Defaults to Arial when it's
-#'     available on the system, otherwise `"sans"`.
-#' @param title_family Title font family. Defaults to Trebuchet MS when
+#' @param base_family Base font family. Defaults to Arimo, which
+#'     ships with `ggrewindr`.
+#' @param title_family Title font family. Defaults to Fira Sans when
 #'     it's available, otherwise `"sans"`.
 #'
 #' @return A `ggplot2` theme object.
@@ -21,9 +21,8 @@
 #'   labs(title = "Handspring Visor") +
 #'   theme_visor(base_family = "sans", title_family = "sans")
 theme_visor <- function(base_size = 15,
-                      base_family = register_font("Arial", "Arial.ttf",
-                                                  "Arial Bold.ttf"),
-                      title_family = register_font("Trebuchet MS", "Trebuchet MS Bold.ttf")) {
+                      base_family = register_font("Arimo"),
+                      title_family = register_font("Fira Sans", weight = 700)) {
   cols <- visor_cols
   ggplot2::theme_bw(base_size = base_size, base_family = base_family) +
     ggplot2::theme(

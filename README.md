@@ -6,12 +6,12 @@
 
 <!-- badges: end -->
 
-`ggrewindr` is a collection of late 90s `ggplot2` themes: Game Boy greens,
-Surge, Tamagotchi, GeoCities, and 43 more. Each theme samples its
-palette from a freely licensed image of its reference, and every palette
-is checked for text contrast and color blind separation. The themes
-started in [`fmggp2`](https://mjfrigaard.github.io/fmggp2/), the support
-package for [ggplot2: field
+`ggrewindr` is a collection of late 90s `ggplot2` themes: Game Boy
+greens, Surge, Tamagotchi, GeoCities, and 43 more. Each theme samples
+its palette from a freely licensed image of its reference, and every
+palette is checked for text contrast and color blind separation. The
+themes started in [`fmggp2`](https://mjfrigaard.github.io/fmggp2/), the
+support package for [ggplot2: field
 manual](https://mjfrigaard.github.io/fm-ggp2/).
 
 ## Installation
@@ -79,6 +79,7 @@ simulated data.
 library(ggrewindr)
 library(ggplot2)
 showtext::showtext_auto()
+showtext::showtext_opts(dpi = 150) # match the figure dpi set above
 set.seed(1014)
 ok_soda_sales <- data.frame(cans = round(rnorm(300, mean = 45, sd = 12)))
 ggplot(ok_soda_sales, aes(x = cans)) +

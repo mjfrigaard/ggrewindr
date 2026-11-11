@@ -6,17 +6,17 @@
 \usage{
 theme_visor(
   base_size = 15,
-  base_family = register_font("Arial", "Arial.ttf", "Arial Bold.ttf"),
-  title_family = register_font("Trebuchet MS", "Trebuchet MS Bold.ttf")
+  base_family = register_font("Arimo"),
+  title_family = register_font("Fira Sans", weight = 700)
 )
 }
 \arguments{
 \item{base_size}{Base font size. Defaults to \code{15}.}
 
-\item{base_family}{Base font family. Defaults to Arial when it's
-available on the system, otherwise \code{"sans"}.}
+\item{base_family}{Base font family. Defaults to Arimo, which
+ships with \code{ggrewindr}.}
 
-\item{title_family}{Title font family. Defaults to Trebuchet MS when
+\item{title_family}{Title font family. Defaults to Fira Sans when
 it's available, otherwise \code{"sans"}.}
 }
 \value{
@@ -25,7 +25,7 @@ A \code{ggplot2} theme object.
 \description{
 A \code{ggplot2} theme built from a green Handspring Visor Deluxe: a pale
 lavender background, a translucent green frame, a gray LCD panel, green,
-gray, mint, and silver marks, and a Trebuchet MS title.
+gray, mint, and silver marks, and a Fira Sans title.
 }
 \examples{
 library(ggplot2)

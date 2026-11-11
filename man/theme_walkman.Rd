@@ -6,18 +6,18 @@
 \usage{
 theme_walkman(
   base_size = 15,
-  base_family = register_font("Arial", "Arial.ttf", "Arial Bold.ttf"),
-  title_family = register_font("DIN Condensed", "DIN Condensed Bold.ttf")
+  base_family = register_font("Arimo"),
+  title_family = register_font("Barlow Condensed", weight = 700)
 )
 }
 \arguments{
 \item{base_size}{Base font size. Defaults to \code{15}.}
 
-\item{base_family}{Base font family. Defaults to Arial when it's
-available on the system, otherwise \code{"sans"}.}
+\item{base_family}{Base font family. Defaults to Arimo, which
+ships with \code{ggrewindr}.}
 
-\item{title_family}{Title font family. Defaults to DIN Condensed when
-it's available on the system, otherwise \code{"sans"}.}
+\item{title_family}{Title font family. Defaults to Barlow Condensed, which
+ships with \code{ggrewindr}.}
 }
 \value{
 A \code{ggplot2} theme object.
